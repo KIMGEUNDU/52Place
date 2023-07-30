@@ -1,8 +1,9 @@
 {
-  "recommendations": [
-    "bradlc.vscode-tailwindcss",
-    "esbenp.prettier-vscode",
-    "ritwickdey.LiveServer",
-    "dbaeumer.vscode-eslint"
-  ]
+	"recommendations": [
+		"bradlc.vscode-tailwindcss",
+		"esbenp.prettier-vscode",
+		"ritwickdey.liveserver",
+		"dbaeumer.vscode-eslint",
+		"figma.figma-vscode-extension"
+	]
 }

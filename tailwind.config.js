@@ -1,12 +1,48 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./client/**/*.html"],
-  theme: {
-    colors: {
-      "primary-color": "56AF6F",
-      "submary-color": "#FFFFFF",
-    },
-    extend: {},
-  },
-  plugins: [],
+	content: ['./client/**/*.html'],
+	theme: {
+		extend: {
+			colors: {
+				white: '#ffffff',
+				primary: '#609966',
+				secondary: '#38593C',
+				profileBg: '#243826',
+				info: '#F03F40',
+				contentSecondary: '#6B6B6B',
+				contentTeriary: '#A6A6A6',
+
+				gray1: '#E1E1E1',
+				babygray: '#6B6B6B',
+				grayTertiary: '#A6A6A6',
+				gray7: '#404040',
+				light2: '#f9f9f9',
+				light3: '#74C37E',
+			},
+			backgroundImage: {
+				hapjungImage: 'url(/assets/images/Cake.png)',
+				burger: 'url(/assets/icons/burgeractive=true.svg)',
+				photo: 'url(/assets/icons/photoactive=false.svg)',
+				bada: 'url(/assets/images/review/bada.jpg)',
+				chun: 'url(/assets/images/review/chun.jpg)',
+				die: 'url(/assets/images/review/die.jpg)',
+				gureom: 'url(/assets/images/review/gureom.jpg)',
+				huta: 'url(/assets/images/review/huta.jpg)',
+				kirin: 'url(/assets/images/review/kirin.jpg)',
+				korac: 'url(/assets/images/review/korac.jpg)',
+				mapo: 'url(/assets/images/review/mapo.jpg)',
+				new: 'url(/assets/images/review/new.jpg)',
+				opu: 'url(/assets/images/review/opu.jpg)',
+				samjju: 'url(/assets/images/review/samjju.jpg)',
+				plus: 'url(/assets/icons/plus.png)',
+				coverPhoto: 'url(/assets/icons/photo.png)',
+				check: 'url(/assets/icons/check.png)',
+				arrowBlack: 'url(/assets/icons/arrow-right-black.png)',
+				pencil: 'url(/assets/icons/pencil.png)',
+				heart: 'url(/assets/icons/heart.png)',
+				subway: 'url(/assets/icons/subway.png)',
+			},
+		},
+	},
+	plugins: [],
 };
