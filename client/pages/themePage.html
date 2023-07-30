@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="ko-KR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" href="./assets/icon/오이올라간달오이.ico" />
+		<link
+			rel="stylesheet"
+			as="style"
+			crossorigin
+			href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
+		/>
+		<link rel="stylesheet" href="./../css/main.css" />
+		<script src="./../js/common/themePage.js" type="module"></script>
+		<title>project</title>
+	</head>
+
+	<body>
+		<main class="m-auto max-w-xs">
+			<section class="themePageFirstSection">
+				<div class="flex flex-row-reverse justify-around">
+					<div class="flex flex-col pr-2">
+						<h2 class="sr-only">사용자 리뷰 정보</h2>
+						<p class="mb-1 text-base font-bold">
+							COOLION
+							<button>
+								<img src="./../assets/icons/share.png" alt="사용자 정보 공유하기" />
+							</button>
+						</p>
+						<ul class="flex gap-3 text-center font-medium">
+							<li class="userReviewList">
+								리뷰<span><a href="#" class="review__count"></a></span>
+							</li>
+							<li class="userReviewList">
+								사진<span><a href="#" class="photo__count"></a></span>
+							</li>
+							<li class="userReviewList">
+								팔로잉<span><a href="#">71</a></span>
+							</li>
+							<li class="flex flex-col pl-2">
+								팔로워<span><a href="#">100</a></span>
+							</li>
+						</ul>
+					</div>
+					<div class="relative w-14">
+						<img
+							class="rounded-3xl border-4 border-white bg-primary"
+							src="./../assets/icons/logo.png"
+							alt="프로필 사진"
+						/>
+						<button class="profilePhotoEdit">
+							<img
+								src="./../assets/icons/greenpencil.png"
+								alt="프로필 사진 수정하기"
+								aria-hidden="true"
+							/>
+						</button>
+					</div>
+				</div>
+				<div class="mt-5 flex justify-between gap-2 font-semibold">
+					<button class="flex-grow rounded-md bg-secondary py-1">
+						<img
+							class="inline pr-1"
+							src="./../assets/icons/whitepencil.png"
+							alt="리뷰작성하기"
+							aria-hidden="true"
+						/>리뷰 쓰기
+					</button>
+					<button class="rounded-md bg-secondary px-3">
+						<img
+							class="inline pr-1"
+							src="./../assets/icons/mission.png"
+							alt="리뷰 미션 보러가기"
+							aria-hidden="true"
+						/>미션
+					</button>
+				</div>
+				<button class="coupon">쿠폰</button>
+				<span class="couponUp"></span>
+			</section>
+
+			<section class="bg-white">
+				<nav>
+					<ul class="menuList">
+						<li class="menuListItem" data-tab-index="1">
+							<button type="button">피드</button>
+						</li>
+						<li class="menuListItem" data-tab-index="2">
+							<button type="button">방문</button>
+						</li>
+						<li class="menuListItem" data-tab-index="3">
+							<button type="button">리뷰</button>
+						</li>
+						<li class="menuListItem" data-tab-index="3">
+							<button type="button">예약&#8901;주문</button>
+						</li>
+					</ul>
+				</nav>
+				<div class="my-5 px-4">
+					<h3 class="mb-3 text-base font-semibold">테마<span class="text-gray-500">1</span></h3>
+					<div class="flex gap-4">
+						<a href="#" class="reviewImage1 relative pl-1">
+							<h4 class="mt-20 pl-1 text-left font-semibold">연남/합정 데이트</h4>
+							<div class="flex pl-1 text-xs font-semibold">
+								<p class="pr-1">장소 1</p>
+								<p>
+									<img
+										class="inline pr-1"
+										src="../assets/icons/group.png"
+										alt="조회수"
+										aria-hidden="true"
+									/><span>7</span>
+								</p>
+							</div>
+							<p class="temporarySave">임시저장</p>
+							<div class="mt-3 flex gap-2 pl-1">
+								<p class="thumnailImage">img</p>
+								<p class="thumnailImage">img</p>
+							</div>
+						</a>
+						<a href="#" class="reviewImage2">
+							<img
+								class="h-11 w-11 rounded-3xl bg-primary"
+								src="../assets/icons/plus.png"
+								alt="리뷰 추가하기"
+							/>
+							<p class="myReview">
+								내 리뷰만 모아<br />
+								테마만들기
+							</p>
+						</a>
+					</div>
+				</div>
+			</section>
+			<section class="px-4">
+				<div class="flex justify-between text-xs font-semibold">
+					<div class="flex">
+						<button class="burger">전체</button>
+						<button class="photo">사진</button>
+					</div>
+					<button class="newDateBtn flex gap-1 py-3">
+						<span class="newDateBtn__text">조회수순</span
+						><img class="newClick" src="../assets/icons/down.png" alt="조회수순 보기" />
+					</button>
+				</div>
+				<ul class="review__List flex flex-wrap gap-1 py-3"></ul>
+			</section>
+		</main>
+	</body>
+</html>

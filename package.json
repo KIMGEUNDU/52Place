@@ -15,9 +15,12 @@
     "javascript",
     "시맨틱 마크업",
     "웹표준",
-    "함수형 프로그래밍"
+    "함수형 프로그래밍",
+    "오이플레이스",
+    "핫플레이스",
+    "자바스크립트 프로젝트"
   ],
-  "author": "담당자",
+  "author": "프로젝트12조 - 52는10이조",
   "license": "ISC",
   "devDependencies": {
     "json-server": "^0.17.3",
@@ -27,5 +30,8 @@
     "prettier": "^3.0.0",
     "prettier-plugin-tailwindcss": "^0.4.1",
     "tailwindcss": "^3.3.3"
+  },
+  "dependencies": {
+    "eslint": "^8.46.0"
   }
 }
