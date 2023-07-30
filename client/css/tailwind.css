@@ -208,3 +208,36 @@ body {
 .reviewName {
 	@apply absolute bottom-4 left-2 text-base;
 }
+
+
+.input {
+	@apply h-[46px] w-[288px] border-b border-contentSecondary bg-transparent focus:outline-none;
+}
+
+.coverbButton {
+	@apply mx-auto mt-[80px] flex rounded-full border bg-coverPhoto bg-[center_left_12px] bg-no-repeat px-3 py-2 pl-9 text-right;
+}
+
+.coverButtonMap {
+	@apply ml-auto mt-[72px] flex rounded-full border bg-subway bg-[center_left_12px] bg-no-repeat px-3 py-2 pl-9 text-right text-sm;
+}
+
+.enterButton {
+	@apply rounded-full border bg-check bg-[center_left_8px] bg-no-repeat px-3 py-2 pl-8 text-right text-xs font-semibold text-white;
+}
+
+.activeEnterButton {
+	@apply rounded-full bg-light3  bg-check bg-[center_left_8px] bg-no-repeat px-3 py-2 pl-8 text-right text-sm font-semibold text-white;
+}
+
+.editButton {
+	@apply w-full rounded-full bg-light3 bg-pencil bg-[center_left_110px] bg-no-repeat py-2 pl-9 text-sm font-semibold text-white;
+}
+
+.arrowRghtButton {
+	@apply ml-2 h-[30px] w-[30px] bg-arrowBlack;
+}
+
+.heartButton {
+	@apply absolute bottom-9 right-4 h-[30px] w-[30px] items-center bg-heart bg-[center] bg-no-repeat;
+}
