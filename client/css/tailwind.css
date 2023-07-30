@@ -22,6 +22,194 @@ body {
 		sans-serif;
 }
 
+.reviewBox {
+	@apply relative box-border flex w-[198px] flex-col justify-center gap-1 rounded-r-2xl bg-white px-3 py-3 text-xs;
+}
+
+.burger2 {
+	@apply flex w-16 flex-row-reverse bg-burgerTrue bg-left bg-no-repeat p-3 text-black;
+}
+
+.photo2 {
+	@apply flex w-16 flex-row-reverse bg-photoFalse bg-left bg-no-repeat p-3 text-gray-400 active:bg-photoTrue active:text-black;
+}
+
+.input {
+	@apply h-[46px] w-[288px] border-b border-contentSecondary bg-transparent focus:outline-none;
+}
+
+.enterButton {
+	@apply rounded-full border bg-check bg-[center_left_8px] bg-no-repeat px-3 py-2 pl-8 text-right text-xs font-semibold text-white;
+}
+
+.coverButton {
+	@apply mx-auto mt-[98px] flex rounded-full border bg-coverPhoto bg-[center_left_12px] bg-no-repeat px-3 py-2 pl-9 text-right;
+}
+
+.plusReview {
+	@apply mt-3 rounded-[50px] bg-light3 bg-plus bg-[center_left_0.5rem] bg-no-repeat py-3 pl-8 pr-4 text-right text-xs font-semibold text-white;
+}
+
+/*재사용*/
+.inputBox {
+	@apply mb-3 h-[41px] w-[251px] rounded border border-[#609966] px-3 text-xs font-normal placeholder:text-[#609966];
+}
+
+.inputTitle {
+	@apply text-xs font-normal text-[#609966];
+}
+
+.loginBtn {
+	@apply mb-3 h-[54px] w-[251px] rounded-md bg-[#609966] text-xs font-normal text-white;
+}
+
+.logoImg {
+	@apply m-auto mb-[43px] mt-[35px] h-[156px] w-[151px];
+}
+
+/*index*/
+
+.indexTitle {
+	@apply my-8 text-[28px] font-bold text-[#609966];
+}
+
+.indexBtn {
+	@apply h-[41px] w-[251px] rounded-md bg-[#609966] text-xs text-white;
+}
+
+/*login*/
+
+.loginTitle {
+	@apply ml-[35px] self-start text-[28px] font-semibold text-[#609966];
+}
+
+.joinBtn {
+	@apply h-[54px] w-[251px] rounded-md border border-[#609966] text-xs font-normal text-[#609966];
+}
+
+.searchBox {
+	@apply mb-7 text-right text-xs font-normal text-[#609966];
+}
+
+/*membership*/
+.joinMain {
+	@apply flex flex-col items-center;
+}
+
+.joinTitle {
+	@apply ml-[35px] self-start text-[28px] font-semibold text-[#609966];
+}
+
+/*nav*/
+.navImg {
+	@apply mx-auto mt-2 h-6 w-6;
+}
+
+.navList {
+	@apply flex justify-center text-center text-xs font-normal leading-5;
+}
+
+/*header*/
+.headerTime {
+	@apply absolute my-[7px] ml-[18px] text-base font-semibold;
+}
+
+.headerPosition {
+	@apply absolute my-[12px] ml-[54px] h-3.5 w-3.5;
+}
+
+.headerVector {
+	@apply absolute ml-[240px] mt-[16px] h-[10px] w-[12.83px];
+}
+
+.headerLte {
+	@apply absolute ml-[258px] mt-[13px] text-xs font-semibold;
+}
+
+.headerBattery {
+	@apply absolute ml-[281px] mt-3 h-[17px] w-5 items-center;
+}
+
+.themePageFirstSection {
+	@apply relative h-40 w-full bg-primary px-6 pb-5 pt-9 text-xs text-white;
+}
+
+.userReviewList {
+	@apply flex flex-col border-r pr-3;
+}
+
+.profilePhotoEdit {
+	@apply absolute bottom-0 right-0 rounded-3xl border-4 border-white bg-white;
+}
+
+.coupon {
+	@apply absolute right-5 top-4 rounded border p-1;
+}
+
+.couponUp {
+	@apply absolute right-4 top-[14px] inline-block h-3 w-3 rounded-3xl bg-white;
+}
+
+.menuList {
+	@apply flex justify-between border-b-2 pt-2 text-center shadow-bottom;
+}
+
+.menuListItem {
+	@apply h-8 w-1/4 py-1 font-semibold text-notSelect active:text-primary;
+}
+.reviewImage1 {
+	@apply h-[184px] w-[140px] rounded-2xl bg-cakeImage bg-cover bg-no-repeat shadow-thumnail;
+}
+
+.temporarySave {
+	@apply absolute left-3 top-3 rounded bg-white px-1 text-xs font-semibold text-contentSecondary;
+}
+
+.thumnailImage {
+	@apply rounded bg-thumnail p-2 font-semibold;
+}
+
+.reviewImage2 {
+	@apply flex h-[184px] w-[148px] flex-col items-center justify-center rounded-2xl bg-thumnailBg bg-cover bg-no-repeat shadow-thumnail;
+}
+
+.myReview {
+	@apply mt-3 text-center text-xs font-semibold text-gray-400;
+}
+
+.burger {
+	@apply flex w-16 flex-row-reverse bg-burgerFalse bg-left bg-no-repeat p-3 text-gray-400 active:bg-burgerTrue active:text-black;
+}
+
+.photo {
+	@apply flex w-16 flex-row-reverse bg-photoTrue bg-left bg-no-repeat p-3;
+}
+
+.listSize {
+	@apply relative mb-2 h-36 w-[140px] rounded-xl px-2;
+}
+
+.bookMark {
+	@apply absolute right-2 top-2 h-5 w-4;
+}
+
+.reviewImg {
+	@apply absolute right-0 top-0 h-36 w-[140px] rounded-xl;
+}
+
+.reviewLink {
+	@apply block h-[140px] w-[140px] pt-20 font-semibold text-white;
+}
+
+.reviewPlace {
+	@apply absolute bottom-10 left-2 text-xs;
+}
+
+.reviewName {
+	@apply absolute bottom-4 left-2 text-base;
+}
+
+
 .input {
 	@apply h-[46px] w-[288px] border-b border-contentSecondary bg-transparent focus:outline-none;
 }
