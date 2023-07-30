@@ -42,7 +42,7 @@ body {
 /*index*/
 
 .indexTitle {
-	@apply my-8 text-2.5xl font-bold text-[#609966];
+	@apply my-8 text-[28px] font-bold text-[#609966];
 }
 
 .indexBtn {
@@ -52,7 +52,7 @@ body {
 /*login*/
 
 .loginTitle {
-	@apply ml-[35px] self-start text-2.5xl font-semibold text-[#609966];
+	@apply ml-[35px] self-start text-[28px] font-semibold text-[#609966];
 }
 
 .joinBtn {
@@ -69,7 +69,7 @@ body {
 }
 
 .joinTitle {
-	@apply ml-[35px] self-start text-2.5xl font-semibold text-[#609966];
+	@apply ml-[35px] self-start text-[28px] font-semibold text-[#609966];
 }
 
 /*nav*/
@@ -91,7 +91,7 @@ body {
 }
 
 .headerVector {
-	@apply absolute ml-[239.75px] mt-[15.67px] h-[10px] w-[12.83px];
+	@apply absolute ml-[240px] mt-[16px] h-[10px] w-[12.83px];
 }
 
 .headerLte {
