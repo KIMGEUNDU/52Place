@@ -49,23 +49,6 @@ body {
 .plusReview {
 	@apply mt-3 rounded-[50px] bg-light3 bg-plus bg-[center_left_0.5rem] bg-no-repeat py-3 pl-8 pr-4 text-right text-xs font-semibold text-white;
 }
-body {
-	font-family:
-		Pretendard,
-		-apple-system,
-		BlinkMacSystemFont,
-		system-ui,
-		Roboto,
-		'Helvetica Neue',
-		'Segoe UI',
-		'Apple SD Gothic Neo',
-		'Noto Sans KR',
-		'Malgun Gothic',
-		'Apple Color Emoji',
-		'Segoe UI Emoji',
-		'Segoe UI Symbol',
-		sans-serif;
-}
 
 /*재사용*/
 .inputBox {
@@ -145,4 +128,83 @@ body {
 
 .headerBattery {
 	@apply absolute ml-[281px] mt-3 h-[17px] w-5 items-center;
+}
+
+.themePageFirstSection {
+	@apply relative h-40 w-full bg-primary px-6 pb-5 pt-9 text-xs text-white;
+}
+
+.userReviewList {
+	@apply flex flex-col border-r pr-3;
+}
+
+.profilePhotoEdit {
+	@apply absolute bottom-0 right-0 rounded-3xl border-4 border-white bg-white;
+}
+
+.coupon {
+	@apply absolute right-5 top-4 rounded border p-1;
+}
+
+.couponUp {
+	@apply absolute right-4 top-[14px] inline-block h-3 w-3 rounded-3xl bg-white;
+}
+
+.menuList {
+	@apply flex justify-between border-b-2 pt-2 text-center shadow-bottom;
+}
+
+.menuListItem {
+	@apply h-8 w-1/4 py-1 font-semibold text-notSelect active:text-primary;
+}
+.reviewImage1 {
+	@apply h-[184px] w-[140px] rounded-2xl bg-cakeImage bg-cover bg-no-repeat shadow-thumnail;
+}
+
+.temporarySave {
+	@apply absolute left-3 top-3 rounded bg-white px-1 text-xs font-semibold text-contentSecondary;
+}
+
+.thumnailImage {
+	@apply rounded bg-thumnail p-2 font-semibold;
+}
+
+.reviewImage2 {
+	@apply flex h-[184px] w-[148px] flex-col items-center justify-center rounded-2xl bg-thumnailBg bg-cover bg-no-repeat shadow-thumnail;
+}
+
+.myReview {
+	@apply mt-3 text-center text-xs font-semibold text-gray-400;
+}
+
+.burger {
+	@apply flex w-16 flex-row-reverse bg-burgerFalse bg-left bg-no-repeat p-3 text-gray-400 active:bg-burgerTrue active:text-black;
+}
+
+.photo {
+	@apply flex w-16 flex-row-reverse bg-photoTrue bg-left bg-no-repeat p-3;
+}
+
+.listSize {
+	@apply relative mb-2 h-36 w-[140px] rounded-xl px-2;
+}
+
+.bookMark {
+	@apply absolute right-2 top-2 h-5 w-4;
+}
+
+.reviewImg {
+	@apply absolute right-0 top-0 h-36 w-[140px] rounded-xl;
+}
+
+.reviewLink {
+	@apply block h-[140px] w-[140px] pt-20 font-semibold text-white;
+}
+
+.reviewPlace {
+	@apply absolute bottom-10 left-2 text-xs;
+}
+
+.reviewName {
+	@apply absolute bottom-4 left-2 text-base;
 }
