@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			as="style"
+			crossorigin
+			href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
+		/>
+
+		<link rel="stylesheet" href="./../css/main.css" />
+		<title>오이 플레이스</title>
+	</head>
+	<body>
+		<main class="relative m-auto max-w-xs bg-gray1">
+			<!-- 헤딩 -->
+			<section class="sticky top-0 z-10 flex items-center justify-between bg-white py-3">
+				<a href="#"><img src="../assets/icons/leftblack.png" alt="뒤로가기" /></a>
+				<h1 class="title text-base font-semibold">리뷰 선택</h1>
+				<a href="#"><img src="../assets/icons/close.png" alt="닫기" /></a>
+			</section>
+
+			<!-- sort -->
+			<section class="px-4">
+				<div class="flex items-center justify-between text-xs font-semibold">
+					<div class="flex">
+						<button class="burger2">전체</button>
+						<button class="photo2">사진</button>
+					</div>
+					<button class="newDateBtn flex gap-1 py-3">
+						<span class="newDateBtn__text text-contentSecondary">최신순</span
+						><img class="newClick" src="../assets/icons/down.png" alt="최신순 보기" />
+					</button>
+				</div>
+				<ul class="review__List flex flex-wrap gap-1"></ul>
+			</section>
+
+			<!-- 리뷰 리스트 -->
+			<section class="review__content px-4 py-1">
+				<ul class="review__list">
+					<li class="review relative flex h-[91px] list-none" data-index="1">
+						<figure class="review__preview h-[91px] w-[92px]">
+							<img
+								src="../assets/images/review4.png"
+								alt=""
+								class="review__previewImg rounded-l-2xl"
+								aria-labelledby="review__previewCap"
+							/>
+							<figcaption id="review__previewCap" class="sr-only">리뷰 미리보기 이미지</figcaption>
+						</figure>
+						<div class="review__wrap reviewBox">
+							<h2 class="review__title font-semibold">후타츠 홍대본점</h2>
+							<p class="review__content truncate">홍대에 있는 소바중에 제일 맛있어요!</p>
+							<span class="info__location text-contentTeriary"
+								>서울시 서교동 | <time datetime="04-01" class="info__date">4.1.토 방문</time></span
+							>
+							<button class="absolute right-[10px] top-[10px]">
+								<img src="../assets/icons/call.png" alt="전화걸기" class="fill-blue-500" />
+							</button>
+						</div>
+					</li>
+				</ul>
+			</section>
+		</main>
+	</body>
+</html>
