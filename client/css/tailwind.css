@@ -4,3 +4,48 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+	font-family:
+		Pretendard,
+		-apple-system,
+		BlinkMacSystemFont,
+		system-ui,
+		Roboto,
+		'Helvetica Neue',
+		'Segoe UI',
+		'Apple SD Gothic Neo',
+		'Noto Sans KR',
+		'Malgun Gothic',
+		'Apple Color Emoji',
+		'Segoe UI Emoji',
+		'Segoe UI Symbol',
+		sans-serif;
+}
+
+.reviewBox {
+	@apply relative box-border flex w-[198px] flex-col justify-center gap-1 rounded-r-2xl bg-white px-3 py-3 text-xs;
+}
+
+.burger2 {
+	@apply flex w-16 flex-row-reverse bg-burgerTrue bg-left bg-no-repeat p-3 text-black;
+}
+
+.photo2 {
+	@apply flex w-16 flex-row-reverse bg-photoFalse bg-left bg-no-repeat p-3 text-gray-400 active:bg-photoTrue active:text-black;
+}
+
+.input {
+	@apply h-[46px] w-[288px] border-b border-contentSecondary bg-transparent focus:outline-none;
+}
+
+.enterButton {
+	@apply rounded-full border bg-check bg-[center_left_8px] bg-no-repeat px-3 py-2 pl-8 text-right text-xs font-semibold text-white;
+}
+
+.coverButton {
+	@apply mx-auto mt-[98px] flex rounded-full border bg-coverPhoto bg-[center_left_12px] bg-no-repeat px-3 py-2 pl-9 text-right;
+}
+
+.plusReview {
+	@apply mt-3 rounded-[50px] bg-light3 bg-plus bg-[center_left_0.5rem] bg-no-repeat py-3 pl-8 pr-4 text-right text-xs font-semibold text-white;
+}

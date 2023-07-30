@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			as="style"
+			crossorigin
+			href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
+		/>
+
+		<link rel="stylesheet" href="./../css/main.css" />
+		<title>오이 플레이스</title>
+	</head>
+	<body>
+		<main class="relative m-auto max-w-xs">
+			<h1 class="sr-only">리뷰 작성하기</h1>
+
+			<!-- 헤딩 -->
+			<section class="sticky top-0 z-10 flex items-center justify-between bg-gray7 p-2">
+				<a href="#"><img src="../assets/icons/leftwhite.png" alt="뒤로가기" /></a>
+				<button class="enterButton">등록</button>
+			</section>
+
+			<!-- input -->
+			<section class="h-[348px] bg-gray7 px-4 pb-8 pt-3">
+				<form action="URL" class="flex flex-row text-white">
+					<fieldset>
+						<legend class="sr-only">리뷰 작성 폼</legend>
+						<div>
+							<div>
+								<label for="coverTitle" class="sr-only">제목</label>
+								<input
+									type="text"
+									class="cover__title input font-semibold placeholder:text-2xl placeholder:text-white"
+									id="coverTitle"
+									name="coverTitle"
+									placeholder="제목을 입력해주세요*"
+									required
+									onfocus="this.placeholder=''"
+									onblur="this.placeholder='제목을 입력해주세요*'"
+								/>
+								<p class="text-right">0/00</p>
+							</div>
+							<div>
+								<label for="cover__sub" class="sr-only">제목</label>
+								<input
+									type="text"
+									class="cover__sub input placeholder:text-grayTertiary placeholder:text-xs"
+									id="coverSub"
+									name="coverSub"
+									placeholder="어떤 리스트인지 설명해주세요"
+									onfocus="this.placeholder=''"
+									onblur="this.placeholder='어떤 리스트인지 설명해주세요'"
+								/>
+							</div>
+							<p class="text-right">0/00</p>
+							<button class="coverButton">
+								<span class="ml-1 flex font-semibold">커버변경</span>
+								<span class="ml-1 pt-[6px] text-xs text-contentTeriary">필수</span>
+							</button>
+						</div>
+					</fieldset>
+				</form>
+			</section>
+
+			<!-- review -->
+			<section class="-mt-[14px] rounded-t-xl bg-white px-[22px] pb-[47px] pt-[18px]">
+				<div class="mb-3 flex justify-between">
+					<div class="flex font-semibold">
+						<h2 class="">리뷰</h2>
+						<span class="ml-1 text-info">0</span>
+						<span class="text-contentTeriary">/10</span>
+					</div>
+					<ul class="flex items-center">
+						<li class="flex flex-row gap-1 text-xs text-contentTeriary">
+							<button>임시저장 |</button>
+							<button>순서변경 |</button>
+							<button>전체삭제</button>
+						</li>
+					</ul>
+				</div>
+				<h3 class="sr-only">리뷰작성</h3>
+				<div class="mt-28 flex flex-col items-center justify-center">
+					<p class="text-center text-xs leading-5 text-contentTeriary">
+						내가 작성한 리뷰를 추가해<br />새로운 테마 리스트를 만들어보세요.
+					</p>
+					<button class="plusReview">리뷰 추가하기</button>
+				</div>
+			</section>
+		</main>
+	</body>
+</html>
