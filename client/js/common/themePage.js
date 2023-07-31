@@ -1,7 +1,7 @@
 import { attr, getNode, getNodes, renderUserReview, userDataReview } from '../../lib/index.js';
 
 //review.json 나열
-const ul = getNode('.review__List');
+const ul = getNode('.review__list');
 const response = await userDataReview.get('http://localhost:3000/review');
 const reviewData = response.data;
 
@@ -62,9 +62,30 @@ const list = getNodes('.listSize');
 
 function handleList(e) {
 	e.preventDefault();
-	console.log('안녕');
 }
 
 list.forEach((item) => {
 	item.addEventListener('click', handleList);
 });
+
+//header 시간 바꾸기
+const headerTime = getNode('.headerTime');
+headerTime.textContent = new Date().toLocaleTimeString('ko-KR').slice(3, -3);
+
+setInterval(() => {
+	let time = new Date().toLocaleTimeString('ko-KR');
+	headerTime.textContent = time.slice(3, -3);
+}, 60000);
+
+//조회수 카운트하기
+const reviewImage1 = getNode('.reviewImage1');
+const viewCount = getNode('.view__count');
+let viewCountUp = parseInt(localStorage.getItem('조회수'));
+viewCount.textContent = localStorage.getItem('조회수');
+
+function setViewsCount() {
+	viewCountUp += 1;
+	localStorage.setItem('조회수', viewCountUp);
+}
+
+reviewImage1.addEventListener('click', setViewsCount);

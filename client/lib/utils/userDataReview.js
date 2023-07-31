@@ -12,21 +12,25 @@ const defaultOptions = {
 };
 
 export const userDataReview = async (options = {}) => {
-	const { url, ...restOptions } = {
-		...defaultOptions,
-		...options,
-		headers: { ...defaultOptions.headers, ...options.headers },
-	};
+	try {
+		const { url, ...restOptions } = {
+			...defaultOptions,
+			...options,
+			headers: { ...defaultOptions.headers, ...options.headers },
+		};
 
-	let response = await fetch(url, restOptions);
+		let response = await fetch(url, restOptions);
 
-	if (response.ok) {
-		response.data = await response.json();
+		if (response.ok) {
+			response.data = await response.json();
+		}
+
+		// console.log(response);
+
+		return response;
+	} catch (err) {
+		throw new Error('에러에러');
 	}
-
-	// console.log(response);
-
-	return response;
 };
 
 userDataReview.get = async (url, options) => {

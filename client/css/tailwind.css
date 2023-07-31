@@ -22,6 +22,10 @@ body {
 		sans-serif;
 }
 
+input[type='file'] {
+	display: none;
+}
+
 .reviewBox {
 	@apply relative box-border flex w-[198px] flex-col justify-center gap-1 rounded-r-2xl bg-white px-3 py-3 text-xs;
 }
@@ -111,7 +115,7 @@ body {
 
 /*header*/
 .headerTime {
-	@apply absolute my-[7px] ml-[18px] text-base font-semibold;
+	@apply absolute my-[7px] ml-3 text-base font-semibold;
 }
 
 .headerPosition {
@@ -151,11 +155,15 @@ body {
 }
 
 .menuList {
-	@apply flex justify-between border-b-2 pt-2 text-center shadow-bottom;
+	@apply flex justify-between pt-2 text-center shadow-bottom;
 }
 
 .menuListItem {
 	@apply h-8 w-1/4 py-1 font-semibold text-notSelect active:text-primary;
+}
+
+.menuListItemReview {
+	@apply h-8 w-1/4 py-1 font-semibold text-primary;
 }
 .reviewImage1 {
 	@apply h-[184px] w-[140px] rounded-2xl bg-cakeImage bg-cover bg-no-repeat shadow-thumnail;
@@ -165,8 +173,12 @@ body {
 	@apply absolute left-3 top-3 rounded bg-white px-1 text-xs font-semibold text-contentSecondary;
 }
 
-.thumnailImage {
-	@apply rounded bg-thumnail p-2 font-semibold;
+.thumnailImage1 {
+	@apply h-[42px] w-[42px] rounded bg-coffee bg-cover;
+}
+
+.thumnailImage2 {
+	@apply h-[42px] w-[42px] rounded bg-sakura bg-cover;
 }
 
 .reviewImage2 {
@@ -209,7 +221,6 @@ body {
 	@apply absolute bottom-4 left-2 text-base;
 }
 
-
 .input {
 	@apply h-[46px] w-[288px] border-b border-contentSecondary bg-transparent focus:outline-none;
 }
@@ -239,5 +250,57 @@ body {
 }
 
 .heartButton {
-	@apply absolute bottom-9 right-4 h-[30px] w-[30px] items-center bg-heart bg-[center] bg-no-repeat;
+	@apply absolute bottom-9 right-4 h-[30px] w-[30px] items-center bg-contentTeriary bg-heart bg-[center] bg-no-repeat;
+}
+
+.newListSize {
+	@apply flex justify-between rounded-xl bg-white px-4 py-6;
+}
+
+.photoAdd {
+	@apply w-[140px] rounded-lg border border-black bg-photoTrue bg-[center_left_0.4rem] bg-no-repeat py-3 pl-7 pr-3 text-xs font-semibold;
+}
+
+.likeBtn {
+	@apply mb-2 h-10 rounded-lg bg-white px-5 text-xs font-semibold text-contentTeriary shadow-bottom;
+}
+
+.likeBtnClicked {
+	@apply mb-2 h-10 rounded-lg bg-primary px-5 text-xs font-semibold text-white shadow-bottom;
+}
+
+.choiceBtnBox {
+	@apply flex w-[200px] flex-col items-center justify-center;
+}
+
+.choiceBtn {
+	@apply mb-2 h-10 rounded-lg bg-white px-5 text-xs font-semibold text-contentTeriary shadow-bottom;
+}
+
+.choiceBtnClicked {
+	@apply mb-2 h-10 rounded-lg bg-primary px-5 text-xs font-semibold text-white shadow-bottom;
+}
+
+.reviewTextArea {
+	@apply h-[110px] w-full overflow-y-hidden rounded-lg bg-grayBg px-3 py-2 focus:outline-none;
+}
+
+.inputLength {
+	@apply absolute bottom-3 right-5 text-right text-xs text-contentTeriary;
+}
+
+.newReviewSubmit {
+	@apply mb-2 h-10 rounded-lg bg-primary px-6 text-xs text-white;
+}
+
+.a11yHidden {
+	@apply absolute -m-1 hidden h-1 w-1 overflow-hidden whitespace-nowrap border-0 p-0;
+}
+
+.uploadImgBox {
+	@apply mt-1 flex w-full items-center justify-center gap-4 overflow-hidden px-4 pt-6;
+}
+
+.uploadImg {
+	@apply h-[80px] w-[80px] rounded-md;
 }

@@ -17,6 +17,7 @@ module.exports = {
 				notSelect: '#A1CAA5',
 				thumnail: '#C4C4C4',
 				thumnailBg: '#E8E8E8',
+				grayBg: '#F9F9F9',
 			},
 			boxShadow: {
 				bottom: '0px 1px 5px 0px rgba(0, 0, 0, 0.25)',
@@ -35,6 +36,9 @@ module.exports = {
 				pencil: 'url(/assets/icons/pencil.png)',
 				heart: 'url(/assets/icons/heart.png)',
 				subway: 'url(/assets/icons/subway.png)',
+				coffee: 'url(/assets/images/imagefieldfeed.png)',
+				sakura: 'url(/assets/images/reviewpost.png)',
+				receipt: 'url(/assets/icons/receipt.png)',
 			},
 		},
 	},
