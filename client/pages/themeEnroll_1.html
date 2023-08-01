@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ko-KR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" href="./../assets/favicon/오이올라간달오이.ico" />
+		<link
+			rel="stylesheet"
+			as="style"
+			crossorigin
+			href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
+		/>
+		<link rel="stylesheet" href="./../css/main.css" />
+		<script src="./../js/common/themeEnroll.js" type="module"></script>
+		<script src="../js/main.js" type="module"></script>
+		<title>오이 플레이스</title>
+	</head>
+
+	<body>
+		<header class="relative z-20 m-auto h-10 max-w-xs bg-white">
+			<div class="">
+				<span class="headerTime">3:28</span>
+				<img class="headerPosition" src="../assets/images/icons/position.png" alt="위치 아이콘" />
+				<img class="headerVector" src="../assets/images/icons/vector.png" alt="네트워크 신호" />
+				<span class="headerLte">LTE</span>
+				<img class="headerBattery" src="../assets/images/icons/battery.png" alt="배터리 함량" />
+			</div>
+		</header>
+
+		<main class="bg-light2 relative m-auto max-w-xs">
+			<h1 class="hidden">themeEnroll</h1>
+
+			<section class="h-[348px] bg-gray7 bg-[url('/assets/images/reviewcake.png')] bg-cover">
+				<!-- 헤딩 -->
+				<section class="menuEnroll">
+					<a href="http://localhost:5500/pages/themePage.html"
+						><img src="/assets/icons/leftwhite.png" alt="뒤로가기"
+					/></a>
+					<button class="activeEnterButton">등록</button>
+				</section>
+
+				<div class="px-4 pb-4 pt-3 text-white">
+					<ul class="ml-2">
+						<li class="pb-3 text-neutral-50">
+							<h2 class="mb-2 text-2xl font-semibold">연남/합정 데이트</h2>
+							<div class="border border-zinc-400 opacity-25"></div>
+							<p class="text-right text-xs font-light text-neutral-400">
+								<strong class="text-neutral-50">9</strong>/20
+							</p>
+						</li>
+						<li class="pb-[60px] text-neutral-50">
+							<p class="mb-2 text-sm">데이트 코스 모음</p>
+							<div class="border border-zinc-400 opacity-25"></div>
+							<sapn>
+								<p class="text-right text-xs font-light text-neutral-400">
+									<strong class="text-neutral-50">9</strong>/100
+								</p>
+							</sapn>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<button class="coverButtonMap">
+						<span class="ml-1 flex font-semibold">지도</span>
+					</button>
+				</div>
+			</section>
+
+			<section class="bg-light2">
+				<div class="-mt-[13px] rounded-t-lg bg-white">
+					<div class="mx-4 mb-3 flex flex-row items-center pt-4">
+						<div class="mr-2 h-[54px] w-[54px] rounded-full border-4 border-primary bg-white">
+							<img class="p-1" src="./../assets/icons/logo.png" alt="프로필 사진" />
+						</div>
+						<ul>
+							<li class="font-semibold">COOLION</li>
+							<li class="flex gap-1 text-xs text-contentTeriary">
+								<spna><a href="#">리뷰 11 •</a></spna>
+								<spna><a href="#">사진 11 •</a></spna>
+								<spna><a>팔로워 71 •</a></spna>
+								<spna><a>테마 0</a></spna>
+							</li>
+						</ul>
+						<button class="arrowRghtButton" onclick="location.href='themePage.html'"></button>
+					</div>
+				</div>
+
+				<div class="px-4 pb-4 pt-2">
+					<button class="editButton" onclick="location.href='themeEnroll_2.html'">수정하기</button>
+				</div>
+
+				<ul class="enroll__list"></ul>
+
+				<section class="map px-4">
+					<div
+						class="relative mb-10 h-[200px] w-full rounded-lg bg-slate-100 bg-[url('/assets/images/location.png')] bg-cover"
+					>
+						<button class="absolute right-2 top-2 block">
+							<img src="/assets/icons/spread.png" alt="지도 확대 아이콘" />
+						</button>
+					</div>
+				</section>
+			</section>
+
+			<section class="sticky bottom-16 z-20">
+				<button class="ml-64">
+					<img src="./../assets/icons/plus.png" alt="icon-lg-plus" />
+				</button>
+			</section>
+
+			<aside class="fixed bottom-0 z-20 bg-white px-4">
+				<nav class="flex">
+					<ul class="navList">
+						<li class="nav__item h-[57px] w-[48px]">
+							<a href="./"
+								><img src="../assets/images/icons/map.png" class="navImg" alt="" />지도</a
+							>
+						</li>
+						<li class="nav__item h-[57px] w-[48px]">
+							<a href="./"
+								><img src="../assets/images/icons/save.png" class="navImg" alt="" />저장</a
+							>
+						</li>
+						<li class="nav__item h-[57px] w-[66px]">
+							<a href="./"
+								><img src="../assets/images/icons/subway.png" class="navImg" alt="" />대중교통</a
+							>
+						</li>
+						<li class="nav__item h-[57px] w-[76px]">
+							<a href="./"
+								><img src="../assets/images/icons/car.png" class="navImg" alt="" />내비게이션</a
+							>
+						</li>
+						<li class="nav__item h-[57px] w-[48px]">
+							<a href="./"><img src="../assets/images/icons/my.png" class="navImg" alt="" />MY</a>
+						</li>
+					</ul>
+				</nav>
+			</aside>
+		</main>
+	</body>
+</html>
