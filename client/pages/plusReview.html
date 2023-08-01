@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="../assets/favicon/오이올라간달오이.ico" type="image/x-icon" />
 		<link
 			rel="stylesheet"
 			as="style"
@@ -11,62 +12,90 @@
 		/>
 
 		<link rel="stylesheet" href="./../css/main.css" />
-		<title>오이 플레이스</title>
+		<script src="../js/common/plusReview.js" type="module"></script>
+		<title>오이플레이스</title>
 	</head>
 	<body>
-		<main class="relative m-auto max-w-xs">
-			<h1 class="sr-only">리뷰 작성하기</h1>
+		<header class="fixed left-1/2 top-0 z-10 h-10 w-full max-w-xs -translate-x-1/2 bg-white">
+			<span class="headerTime">3:28</span>
+			<img class="headerPosition" src="../assets/images/icons/position.png" alt="위치 아이콘" />
+			<img class="headerVector" src="../assets/images/icons/vector.png" alt="네트워크 신호" />
+			<span class="headerLte">LTE</span>
+			<img class="headerBattery" src="../assets/images/icons/battery.png" alt="배터리 함량" />
+		</header>
 
-			<!-- 헤딩 -->
-			<section class="sticky top-0 z-10 flex items-center justify-between bg-gray7 p-2">
-				<a href="#"><img src="../assets/icons/leftwhite.png" alt="뒤로가기" /></a>
-				<button class="enterButton">등록</button>
-			</section>
+		<div class="cover__container inputForm coverBg">
+			<h1 class="sr-only">리뷰 테마 만들기</h1>
 
 			<!-- input -->
-			<section class="h-[348px] bg-gray7 px-4 pb-8 pt-3">
-				<form action="URL" class="flex flex-row text-white">
+			<div class="form__container">
+				<form action="#" class="coverForm formBox">
 					<fieldset>
 						<legend class="sr-only">리뷰 작성 폼</legend>
-						<div>
-							<div>
-								<label for="coverTitle" class="sr-only">제목</label>
+						<div class="text-center">
+							<label for="coverTitle" class="sr-only">제목</label>
+							<input
+								type="text"
+								class="coverTitle coverInputTitle"
+								id="coverTitle"
+								name="coverTitle"
+								placeholder="제목을 입력해주세요*"
+								required
+								onfocus="this.placeholder=''"
+								onblur="this.placeholder='제목을 입력해주세요*'"
+							/>
+							<div class="mt-2 flex justify-end">
+								<span class="coverTitle__count text-xs text-white">0</span>
+								<span class="text-xs text-contentTeriary">&nbsp;/ 20</span>
+							</div>
+							<label for="coverSub" class="sr-only">제목</label>
+							<textarea
+								type="text"
+								rows="1"
+								class="coverSub coverInputSub"
+								id="coverSub"
+								name="coverSub"
+								placeholder="어떤 리스트인지 설명해주세요"
+								onfocus="this.placeholder=''"
+								onblur="this.placeholder='어떤 리스트인지 설명해주세요 선택'"
+							></textarea>
+							<div class="flex justify-end">
+								<span class="coverSub__count text-xs text-white">0</span>
+								<span class="text-xs text-contentTeriary">&nbsp;/ 100</span>
+							</div>
+							<label for="imgUpload" class="coverButton">
 								<input
-									type="text"
-									class="cover__title input font-semibold placeholder:text-2xl placeholder:text-white"
-									id="coverTitle"
-									name="coverTitle"
-									placeholder="제목을 입력해주세요*"
+									type="file"
+									id="imgUpload"
+									name="imgupload"
+									class="btn__upload fileInput"
+									accept="image/*"
 									required
-									onfocus="this.placeholder=''"
-									onblur="this.placeholder='제목을 입력해주세요*'"
 								/>
-								<p class="text-right">0/00</p>
-							</div>
-							<div>
-								<label for="cover__sub" class="sr-only">제목</label>
-								<input
-									type="text"
-									class="cover__sub input placeholder:text-grayTertiary placeholder:text-xs"
-									id="coverSub"
-									name="coverSub"
-									placeholder="어떤 리스트인지 설명해주세요"
-									onfocus="this.placeholder=''"
-									onblur="this.placeholder='어떤 리스트인지 설명해주세요'"
-								/>
-							</div>
-							<p class="text-right">0/00</p>
-							<button class="coverButton">
-								<span class="ml-1 flex font-semibold">커버변경</span>
+								<span class="ml-1 font-semibold">커버변경</span>
 								<span class="ml-1 pt-[6px] text-xs text-contentTeriary">필수</span>
-							</button>
+							</label>
 						</div>
 					</fieldset>
+
+					<!-- 뒤로가기, 등록 -->
+					<div class="heading headingBox">
+						<a href="./themePage.html"
+							><img src="../assets/icons/leftwhite.png" alt="뒤로가기"
+						/></a>
+						<button
+							type="submit"
+							class="enrollBtn enterButton"
+							onclick="location.href ='./themeEnroll_1.html'"
+						>
+							등록
+						</button>
+					</div>
 				</form>
-			</section>
+			</div>
 
 			<!-- review -->
-			<section class="-mt-[14px] rounded-t-xl bg-white px-[22px] pb-[47px] pt-[18px]">
+			<section class="plus__container plusBox activeBox flex-grow">
 				<div class="mb-3 flex justify-between">
 					<div class="flex font-semibold">
 						<h2 class="">리뷰</h2>
@@ -86,9 +115,75 @@
 					<p class="text-center text-xs leading-5 text-contentTeriary">
 						내가 작성한 리뷰를 추가해<br />새로운 테마 리스트를 만들어보세요.
 					</p>
-					<button class="plusReview">리뷰 추가하기</button>
+					<a href="reviewChoice.html" class="plusReview">리뷰 추가하기</a>
 				</div>
 			</section>
-		</main>
+
+			<nav class="fixed bottom-0 left-1/2 z-10 w-full max-w-xs -translate-x-1/2 bg-white">
+				<ul class="navList">
+					<li class="nav__item navWidth">
+						<a href="./map.html"
+							><img src="../assets/images/icons/map.png" class="navImg" alt="지도보기" />지도</a
+						>
+					</li>
+					<li class="nav__item navWidth">
+						<a href="#"
+							><img src="../assets/images/icons/save.png" class="navImg" alt="북마크보기" />저장</a
+						>
+					</li>
+					<li class="nav__item navWidth">
+						<a href="#"
+							><img
+								src="../assets/images/icons/subway.png"
+								class="navImg"
+								alt="대중교통 정보보기"
+							/>대중교통</a
+						>
+					</li>
+					<li class="nav__item navWidth">
+						<a href="#"
+							><img
+								src="../assets/images/icons/car.png"
+								class="navImg"
+								alt="내비게이션 정보 보기"
+							/>내비게이션</a
+						>
+					</li>
+					<li class="nav__item selectNavImg">
+						<a href="./themePage.html"
+							><img
+								src="../assets/images/icons/my.png"
+								class="navImg"
+								alt="마이 페이지로 이동"
+							/>MY</a
+						>
+					</li>
+				</ul>
+			</nav>
+
+			<!-- <nav class="fixed bottom-0 left-1/2 z-10 w-full max-w-xs -translate-x-1/2 bg-white">
+				<ul class="navList navWidth">
+					<li class="nav__item h-[57px] w-[48px]">
+						<a href="./"><img src="../assets/images/icons/map.png" class="navImg" alt="" />지도</a>
+					</li>
+					<li class="nav__item h-[57px] w-[48px]">
+						<a href="./"><img src="../assets/images/icons/save.png" class="navImg" alt="" />저장</a>
+					</li>
+					<li class="nav__item h-[57px] w-[66px]">
+						<a href="./"
+							><img src="../assets/images/icons/subway.png" class="navImg" alt="" />대중교통</a
+						>
+					</li>
+					<li class="nav__item h-[57px] w-[76px]">
+						<a href="./"
+							><img src="../assets/images/icons/car.png" class="navImg" alt="" />내비게이션</a
+						>
+					</li>
+					<li class="nav__item selectNavImg">
+						<a href="./"><img src="../assets/images/icons/my.png" class="navImg" alt="" />MY</a>
+					</li>
+				</ul>
+			</nav> -->
+		</div>
 	</body>
 </html>

@@ -35,7 +35,7 @@ module.exports = {
 				coverPhoto: 'url(/assets/icons/photo.png)',
 				check: 'url(/assets/icons/check.png)',
 				plus: 'url(/assets/icons/plus.png)',
-				arrowBlack: 'url(/assets/icons/arrow-right-black.png)',
+				arrowBlack: 'url(/assets/icons/arrowrightblack.png)',
 				pencil: 'url(/assets/icons/pencil.png)',
 				heart: 'url(/assets/icons/heart.png)',
 				subway: 'url(/assets/icons/subway.png)',
