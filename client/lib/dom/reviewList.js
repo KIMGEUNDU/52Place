@@ -33,7 +33,7 @@ export function createReviewList({ id, name, place, image, detail, date }) {
         <h2 class="reviewTitle">${name}</h2>
         <p class="reviewDetail">${detail}</p>
         <span class="reviewLocation text-contentTeriary"
-          >${place} | <time datetime="04-01" class="reviewDate">${date}</time></span
+          >${place} | <time datetime="04-01" class="reviewDate">${date}&nbsp방문</time></span
         >
         <button class="callButton">
           <img src="../assets/icons/call.png" alt="전화걸기" />
@@ -48,12 +48,12 @@ export function renderReviewList(target, data) {
 	insertLast(target, createReviewList(data));
 }
 
-export function createPlusReview({ index, where, location, preview, sub, when }) {
+export function createPlusReview({ id, where, location, preview, sub, when }) {
 	let template = /* html */ `
   <ul class="enroll__list">
   <li class="Enroll__number">
     <img src="/assets/icons/paper.png" alt="icon-paper" />
-    <p class="enroll__number">NO.${index}</p>
+    <p class="enroll__number">NO.${id}</p>
   </li>
   <li class="Enroll__img">
     <img
