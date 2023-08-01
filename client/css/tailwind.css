@@ -278,7 +278,7 @@ input[type='file'] {
 }
 
 .headingBox {
-	@apply fixed left-1/2 top-8 flex w-full max-w-xs -translate-x-1/2 items-center justify-between bg-transparent p-2;
+	@apply fixed left-1/2 top-10 flex w-full max-w-xs -translate-x-1/2 items-center justify-between bg-transparent p-2;
 }
 
 .coverImg {
@@ -298,7 +298,7 @@ input[type='file'] {
 }
 
 .formBox {
-	@apply flex h-[348px] flex-col px-4 pb-96 pt-16 text-white;
+	@apply flex h-[330px] flex-col px-4 pb-96 pt-16 text-white;
 }
 
 .navWidth {
