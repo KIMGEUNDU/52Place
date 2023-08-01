@@ -5,8 +5,8 @@ const ul = getNode('.newReview__list');
 const response = await userDataReview.get('http://localhost:3000/newReview');
 const reviewData = response.data;
 
-reviewData.forEach((item) => {
-	renderUserNewReview(ul, item);
+reviewData.forEach((item, index) => {
+	renderUserNewReview(ul, item, index);
 });
 
 //header 시간 바꾸기

@@ -5,15 +5,16 @@ const ul = getNode('.review__list');
 const response = await userDataReview.get('http://localhost:3000/review');
 const reviewData = response.data;
 
-reviewData.forEach((item) => {
-	renderUserReview(ul, item);
+reviewData.forEach((item, index) => {
+	renderUserReview(ul, item, index);
 });
 
 //bookMark 체크시 이미지 변경
 const bookMark = getNodes('.bookMark');
 
 let markChecked = false;
-function handleBookMarkChecked() {
+function handleBookMarkChecked(e) {
+	e.preventDefault();
 	if (!markChecked) {
 		attr(this, 'src', '../../assets/icons/bookmarkactive=false.png');
 	} else {
@@ -60,14 +61,6 @@ setCount(photoCount);
 //reviewList 링크 연결 전 기본 동작 막기
 const list = getNodes('.listSize');
 
-function handleList(e) {
-	e.preventDefault();
-}
-
-list.forEach((item) => {
-	item.addEventListener('click', handleList);
-});
-
 //header 시간 바꾸기
 const headerTime = getNode('.headerTime');
 headerTime.textContent = new Date().toLocaleTimeString('ko-KR').slice(3, -3);
@@ -89,3 +82,24 @@ function setViewsCount() {
 }
 
 reviewImage1.addEventListener('click', setViewsCount);
+
+//리스트 선택시 지우기
+// const dataList = getNodes('.listSize');
+
+// dataList.forEach((item) => {
+// 	function handleRemoveList() {
+// 		item.classList.remove('listSize');
+// 		item.classList.add('listHidden');
+// 	}
+// 	item.addEventListener('click', handleRemoveList);
+// });
+
+//Review.json 데이터 중복 확인
+const sameResponse = await userDataReview.get('http://localhost:3000/newReview');
+const sameData = sameResponse.data;
+
+reviewData.forEach((item) => {
+	if (item.id === '12') {
+		console.log('이미 있습니다.');
+	}
+});
