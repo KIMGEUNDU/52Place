@@ -4,17 +4,41 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" href="../assets/favicon/오이올라간달오이.ico" />
 		<link
-			rel="icon"
-			href="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-			type="image/xml+svg"
+			rel="stylesheet"
+			as="style"
+			crossorigin
+			href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
 		/>
 		<link rel="stylesheet" href="./../css/main.css" />
-		<script src="./js/main.js" type="module"></script>
+		<script
+			type="text/javascript"
+			src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c3373a98c0bad3b2b26927966c736ca2"
+		></script>
+		<script src="./../js/common/map.js" type="module"></script>
 		<title>오이플레이스</title>
 	</head>
 
 	<body>
+		<header class="sticky top-0 z-40 m-auto h-10 max-w-xs bg-white">
+			<span class="headerTime"></span>
+			<img class="headerPosition" src="../assets/images/icons/position.png" alt="위치 아이콘" />
+			<img class="headerVector" src="../assets/images/icons/vector.png" alt="네트워크 신호" />
+			<span class="headerLte">LTE</span>
+			<img class="headerBattery" src="../assets/images/icons/battery.png" alt="배터리 함량" />
+		</header>
+
+		<main class="m-auto h-[500px] max-w-xs bg-grayBg">
+			<div class="relative">
+				<div class="h-screen w-[320px]" id="map"></div>
+				<button
+					onclick="location.href='themePage.html'"
+					class="absolute left-2 top-5 z-20 h-6 w-6 bg-mapBefore bg-contain bg-no-repeat"
+				></button>
+			</div>
+		</main>
+
 		<nav class="fixed bottom-0 left-1/2 z-10 w-full max-w-xs -translate-x-1/2 bg-white">
 			<ul class="navList">
 				<li class="nav__item selectNavImg">

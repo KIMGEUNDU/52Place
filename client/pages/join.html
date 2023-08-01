@@ -15,17 +15,20 @@
 			crossorigin
 			href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
 		/>
+		<link rel="icon" href="../assets/favicon/오이올라간달오이.ico" />
 		<link rel="stylesheet" href="./../css/main.css" />
-		<script src="./js/main.js" type="module"></script>
+		<script src="./../js/common/join.js" type="module"></script>
 		<title>오이플레이스</title>
 	</head>
 
-	<body>
-		<main class="flex max-w-xs flex-col items-center">
+	<body class="m-auto h-10 max-w-xs">
+		<main class="m-auto flex h-10 max-w-xs flex-col items-center">
 			<h1 class="logoImg">
-				<img src="../assets/images/icons/logo.png" alt="오이플레이스 아이콘" />
+				<img src="../assets/icons/logo.png" alt="오이플레이스 아이콘" />
 			</h1>
-			<h2 class="joinTitle">회원가입</h2>
+			<div class="h-[41px] w-[251px]">
+				<h2 class="joinTitle">회원가입</h2>
+			</div>
 			<div class="mt-[22px]">
 				<form action="#" class="join__form">
 					<fieldset class="fieldset">
@@ -40,6 +43,7 @@
 								required
 								placeholder="영문 3자 이상"
 							/>
+							<p class="idError">아이디는 숫자 포함, 영문 3자 이상 작성해주세요.</p>
 						</div>
 						<div class="join__email">
 							<label for="userEmail" class="inputTitle">이메일</label><br />
@@ -51,6 +55,7 @@
 								required
 								placeholder="인증 가능한 이메일 주소"
 							/>
+							<p class="emailError">아이디는 이메일 형식으로 입력해 주세요.</p>
 						</div>
 						<div class="join__pwd">
 							<label for="userPassword" class="inputTitle">비밀번호</label><br />
@@ -62,19 +67,21 @@
 								required
 								placeholder="8문자 이상, 특수 문자 포함"
 							/>
+							<p class="pwdError">특수문자 포함 8자리 이상 입력해 주세요.</p>
 						</div>
 						<div class="join__pwdcheck">
-							<label for="userCheck" class="inputTitle">비밀번호 확인</label><br />
+							<label for="pwdSame" class="inputTitle">비밀번호 확인</label><br />
 							<input
 								class="inputBox"
 								type="password"
-								id="pwdcheck"
-								name="pwdcheck"
+								id="pwdSame"
+								name="pwdSame"
 								required
 								placeholder="8문자 이상, 특수 문자 포함"
 							/>
+							<p class="pwdCheckError">비밀번호가 일치하지 않습니다.</p>
 						</div>
-						<button type="submit" class="loginBtn mt-[52px]">로그인</button>
+						<button type="submit" class="loginBtnOff loginBtn mt-[52px]">회원가입</button>
 					</fieldset>
 				</form>
 			</div>

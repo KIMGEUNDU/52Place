@@ -22,6 +22,10 @@ body {
 		sans-serif;
 }
 
+input[type='file'] {
+	display: none;
+}
+
 .reviewBox {
 	@apply relative box-border flex w-[198px] flex-col justify-center gap-1 rounded-r-2xl bg-white px-3 py-3 text-xs;
 }
@@ -34,28 +38,44 @@ body {
 	@apply flex w-16 flex-row-reverse bg-photoFalse bg-left bg-no-repeat p-3 text-gray-400 active:bg-photoTrue active:text-black;
 }
 
-.input {
-	@apply h-[46px] w-[288px] border-b border-contentSecondary bg-transparent focus:outline-none;
+.coverInputTitle {
+	@apply h-[46px] w-72 border-b border-contentSecondary bg-transparent font-semibold placeholder:bg-transparent placeholder:text-2xl placeholder:text-white focus:outline-none;
 }
 
 .enterButton {
-	@apply rounded-full border bg-check bg-[center_left_8px] bg-no-repeat px-3 py-2 pl-8 text-right text-xs font-semibold text-white;
+	@apply mr-1 rounded-full border bg-check bg-[center_left_8px] bg-no-repeat px-3 py-2 pl-8 text-right text-xs font-semibold text-white;
+}
+
+.activeButton {
+	@apply border-0 bg-primary;
+}
+
+.coverButton {
+	@apply mx-auto mt-[98px] flex w-[136px] cursor-pointer rounded-full border bg-coverPhoto bg-[center_left_12px] bg-no-repeat px-3 py-2 pl-9 text-right;
 }
 
 .plusReview {
-	@apply mt-3 rounded-[50px] bg-light3 bg-plus bg-[center_left_0.5rem] bg-no-repeat py-3 pl-8 pr-4 text-right text-xs font-semibold text-white;
+	@apply mt-3 rounded-[50px] bg-light3 bg-reviewplus bg-[center_left_0.5rem] bg-no-repeat py-3 pl-8 pr-4 text-right text-xs font-semibold text-white;
 }
 
 /*재사용*/
 .inputBox {
-	@apply mb-3 h-[41px] w-[251px] rounded border border-[#609966] px-3 text-xs font-normal placeholder:text-[#609966];
+	@apply mb-1 h-[41px] w-[251px] rounded border border-[#609966] px-3 text-xs font-normal placeholder:text-[#609966];
+}
+
+.inputIdBox {
+	@apply mb-0 h-[41px] w-[251px] rounded border border-[#609966] px-3 text-xs font-normal placeholder:text-[#609966];
 }
 
 .inputTitle {
 	@apply text-xs font-normal text-[#609966];
 }
 
-.loginBtn {
+.loginBtnOff {
+	@apply mb-3 h-[54px] w-[251px] rounded-md bg-gray-300  text-xs font-normal text-white;
+}
+
+.loginBtnOn {
 	@apply mb-3 h-[54px] w-[251px] rounded-md bg-[#609966] text-xs font-normal text-white;
 }
 
@@ -76,7 +96,31 @@ body {
 /*login*/
 
 .loginTitle {
-	@apply ml-[35px] self-start text-[28px] font-semibold text-[#609966];
+	@apply self-start text-[28px] font-semibold text-[#609966];
+}
+
+.emailError {
+	@apply hidden px-3 pl-0 text-xs font-normal text-red-600;
+}
+
+.invalidEmail {
+	@apply block px-3 pl-0 text-xs font-normal text-red-600;
+}
+
+.pwdError {
+	@apply hidden px-3 pl-0 text-xs font-normal text-red-600;
+}
+
+.invalidPwd {
+	@apply block px-3 pl-0 text-xs font-normal text-red-600;
+}
+
+.membersError {
+	@apply hidden px-3 pl-0 text-xs font-normal text-red-600;
+}
+
+.invalidMembers {
+	@apply block px-3 pl-0 text-xs font-normal text-red-600;
 }
 
 .joinBtn {
@@ -93,7 +137,23 @@ body {
 }
 
 .joinTitle {
-	@apply ml-[35px] self-start text-[28px] font-semibold text-[#609966];
+	@apply self-start text-[28px] font-semibold text-[#609966];
+}
+
+.idError {
+	@apply hidden px-3 pl-0 text-xs font-normal text-red-600;
+}
+
+.invalidId {
+	@apply block px-3 pl-0 text-xs font-normal text-red-600;
+}
+
+.pwdCheckError {
+	@apply hidden px-3 pl-0 text-xs font-normal text-red-600;
+}
+
+.invalidPwdCheck {
+	@apply block px-3 pl-0 text-xs font-normal text-red-600;
 }
 
 /*nav*/
@@ -107,7 +167,7 @@ body {
 
 /*header*/
 .headerTime {
-	@apply absolute my-[7px] ml-[18px] text-base font-semibold;
+	@apply absolute my-[7px] ml-3 text-base font-semibold;
 }
 
 .headerPosition {
@@ -142,16 +202,16 @@ body {
 	@apply absolute right-5 top-4 rounded border p-1;
 }
 
-.couponUp {
-	@apply absolute right-4 top-[14px] inline-block h-3 w-3 rounded-3xl bg-white;
-}
-
 .menuList {
-	@apply flex justify-between border-b-2 pt-2 text-center shadow-bottom;
+	@apply flex justify-between pt-2 text-center shadow-bottom;
 }
 
 .menuListItem {
 	@apply h-8 w-1/4 py-1 font-semibold text-notSelect active:text-primary;
+}
+
+.menuListItemReview {
+	@apply h-8 w-1/4 py-1 font-semibold text-primary;
 }
 .reviewImage1 {
 	@apply h-[184px] w-[140px] rounded-2xl bg-cakeImage bg-cover bg-no-repeat shadow-thumnail;
@@ -161,8 +221,12 @@ body {
 	@apply absolute left-3 top-3 rounded bg-white px-1 text-xs font-semibold text-contentSecondary;
 }
 
-.thumnailImage {
-	@apply rounded bg-thumnail p-2 font-semibold;
+.thumnailImage1 {
+	@apply h-[42px] w-[42px] rounded bg-coffee bg-cover;
+}
+
+.thumnailImage2 {
+	@apply h-[42px] w-[42px] rounded bg-sakura bg-cover;
 }
 
 .reviewImage2 {
@@ -183,6 +247,10 @@ body {
 
 .listSize {
 	@apply relative mb-2 h-36 w-[140px] rounded-xl px-2;
+}
+
+.listHidden {
+	@apply hidden;
 }
 
 .bookMark {
@@ -233,6 +301,225 @@ body {
 	@apply ml-2 h-[30px] w-[30px] bg-arrowBlack;
 }
 
+.heartButton1 {
+	@apply absolute bottom-9 right-6 h-[30px] w-[30px] items-center bg-heartFalse bg-[center] bg-no-repeat;
+}
+
+.heartButton2 {
+	@apply absolute bottom-9 right-6 h-[30px] w-[30px] items-center bg-heartTrue bg-[center] bg-no-repeat;
+}
+
+.menuEnroll {
+	@apply sticky top-0 z-10 flex items-center justify-between px-4 pb-4 pt-4;
+}
+
+.menuEnrollActive {
+	@apply sticky top-0 z-10 flex items-center justify-between bg-white px-4 pb-4 pt-4;
+}
+
+.navWidth {
+	@apply h-[57px] w-[66px];
+}
+
+.selectNavImg {
+	@apply h-[57px] w-[66px] border-t-2 border-primary font-semibold text-primary;
+}
+
+.enroll__list {
+	@apply relative px-2 pb-4 drop-shadow-sm;
+}
+
+.Enroll__number {
+	@apply mb-2 flex flex-row;
+}
+
+.enroll__number {
+	@apply ml-1 mt-2 text-xs font-medium text-[#70AF76];
+}
+
+.Enroll__img {
+	@apply h-[232px] overflow-hidden;
+}
+
+.enroll__img {
+	@apply w-full rounded-t-lg;
+}
+
+.enroll__time {
+	@apply bg-white px-8 py-4 text-center text-xs;
+}
+
+.enroll__time__p {
+	@apply mb-1.5 mt-2 font-medium text-light3;
+}
+
+.enroll__time__tag {
+	@apply m-0.5 rounded-md border border-light3 p-0.5 text-xs font-medium text-light3;
+}
+
+.enroll__tag {
+	@apply my-2 flex flex-row justify-center gap-1 text-xs text-slate-500;
+}
+
+.enroll__tag__p {
+	@apply flex rounded-md bg-slate-50 px-1.5 py-0.5;
+}
+
+.enroll__tag__p__img {
+	@apply mb-1 mr-1 inline-block;
+}
+
+.Enroll__title {
+	@apply border-t-2 border-dotted border-slate-300 bg-white px-4 py-3;
+}
+
+.enroll__zig {
+	@apply -mt-1 flex items-center;
+}
+
+.enroll__zag {
+	@apply flex flex-row-reverse;
+}
+
+.selectNavImg {
+	@apply h-[57px] w-[66px] border-t-2 border-primary font-semibold text-primary;
+}
+
+.navWidth {
+	@apply h-[57px] w-[66px];
+}
+
+.callButton {
+	@apply absolute right-[10px] top-[10px];
+}
+
+.reviewContent {
+	@apply relative mb-3 flex h-[92px] cursor-pointer list-none;
+}
+
+.figureSize {
+	@apply h-[92px] w-[92px] rounded-l-2xl;
+}
+
+.reviewDetail {
+	@apply truncate;
+}
+
+.reviewTitle {
+	@apply font-semibold;
+}
+
+/* jin */
+
+.coverInputSub {
+	@apply mt-3 h-6 w-72 resize-none overflow-hidden border-b border-contentSecondary bg-transparent text-xs placeholder:text-xs placeholder:text-contentTeriary focus:outline-none;
+}
+
+.inputForm {
+	@apply relative mx-auto mt-8 flex min-h-screen max-w-xs flex-col;
+}
+
+input[type='file'] {
+	display: none;
+}
+
+.headingBox {
+	@apply fixed left-1/2 top-10 flex w-full max-w-xs -translate-x-1/2 items-center justify-between bg-transparent p-2;
+}
+
+.coverImg {
+	@apply absolute -z-[1] h-[400px] w-full object-cover text-center;
+}
+
+.coverBg {
+	@apply bg-gray7;
+}
+
+.scrollheading {
+	@apply bg-gray7 duration-150 ease-in;
+}
+
+.plusBox {
+	@apply -mt-[46px] rounded-t-xl bg-white px-[22px] pb-20 pt-[18px];
+}
+
+.formBox {
+	@apply flex h-[330px] flex-col px-4 pb-96 pt-16 text-white;
+}
+
+.navWidth {
+	@apply h-[57px] w-[66px];
+}
+
+.selectNavImg {
+	@apply h-[57px] w-[66px] border-t-2 border-primary font-semibold text-primary;
+}
+
+.callButton {
+	@apply absolute right-[10px] top-[10px];
+}
+
+.reviewContent {
+	@apply relative mb-3 flex h-[92px] cursor-pointer list-none;
+}
+
+.figureSize {
+	@apply h-[92px] w-[92px] rounded-l-2xl;
+}
+
+.reviewDetail {
+	@apply truncate;
+}
+
+.reviewTitle {
+	@apply font-semibold;
+}
+
+/* jin */
+
+.coverInputSub {
+	@apply mt-3 h-6 w-72 resize-none overflow-hidden border-b border-contentSecondary bg-transparent text-xs placeholder:text-xs placeholder:text-contentTeriary focus:outline-none;
+}
+
+.inputForm {
+	@apply relative mx-auto mt-8 flex min-h-screen max-w-xs flex-col;
+}
+
+input[type='file'] {
+	display: none;
+}
+
+.headingBox {
+	@apply fixed left-1/2 top-10 flex w-full max-w-xs -translate-x-1/2 items-center justify-between bg-transparent p-2;
+}
+
+.coverImg {
+	@apply absolute -z-[1] h-[400px] w-full object-cover text-center;
+}
+
+.coverBg {
+	@apply bg-gray7;
+}
+
+.scrollheading {
+	@apply bg-gray7 duration-150 ease-in;
+}
+
+.plusBox {
+	@apply -mt-[46px] rounded-t-xl bg-white px-[22px] pb-20 pt-[18px];
+}
+
+.formBox {
+	@apply flex h-[330px] flex-col px-4 pb-96 pt-16 text-white;
+}
+
+.navWidth {
+	@apply h-[57px] w-[66px];
+}
+
+.selectNavImg {
+	@apply h-[57px] w-[66px] border-t-2 border-primary font-semibold text-primary;
+}
 .heartButton1 {
 	@apply absolute bottom-9 right-6 h-[30px] w-[30px] items-center bg-heartFalse bg-[center] bg-no-repeat;
 }
