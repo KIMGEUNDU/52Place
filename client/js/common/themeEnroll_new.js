@@ -5,31 +5,29 @@ function getUrlParameter(name) {
 	return urlParams.get(name);
 }
 
-// console.log(id);
+// 전달받은 id값
 const itemId = getUrlParameter('itemId');
 console.log(itemId);
 
 // review 데이터 가져오기
 const response = await userDataReview.get('http://localhost:3000/review');
+const reviewData = response.data;
+console.log(reviewData);
 
 // 선택된 li의 데이터 가져오기
-const reviewData = response.data;
-const reviewDataId = reviewData[itemId - 1].id;
 const newData = reviewData[itemId - 1];
 console.log(newData.id);
-console.log(reviewDataId);
 
-// let isDuplicate = true;
+// plusReview의 데이터 가져오기
+const url = 'http://localhost:3000/plusReview';
+const plusReview = await userDataReview.get(url);
+const plusData = plusReview.data;
+console.log(plusData);
 
-// const isNotDuplicate = (reviewDataId, newData) => {
-// 	if (newData.id === reviewDataId) {
-// 		return !isDuplicate;
-// 	}
-// };
-
+// plusReview의 데이터셋 생성
 function keyPlusReview() {
 	return {
-		index: `${reviewDataId}`,
+		index: `${newData.id}`,
 		where: `${newData.name}`,
 		location: `${newData.image.src}`,
 		preview: {
@@ -42,72 +40,44 @@ function keyPlusReview() {
 }
 
 const postData = keyPlusReview();
+console.log(postData);
 
-const url = 'http://localhost:3000/plusReview';
+// plusData의 index값과 li를 통해 가져온 데이터의 index 값이 일치하는지 확인
+const hasDuplicateIndex = plusData.some((item) => item.index === postData.index);
+console.log(hasDuplicateIndex);
 
-// 기존에 추가한 데이터가 중복되지 않는지 확인하는 함수
-const isNotDuplicate = (newData) => {
-	// 서버에서 현재 데이터를 가져오는 예시로 GET 요청을 보냅니다.
-	return fetch('http://localhost:3000/plusReview')
-		.then((response) => response.json())
+if (hasDuplicateIndex) {
+	// index 값이 동일하다면 post요청을 하지 않음
+	console.log('이미 동일한 데이터가 존재합니다.');
+} else {
+	// index 값이 일치하지 않는 새로운 데이터라면 post요청
+	fetch('http://localhost:3000/plusReview', {
+		method: 'POST',
+		body: JSON.stringify(postData),
+		headers: {
+			'Content-Type': 'application/json',
+			'Access-Control-Allow-Origin': '*',
+		},
+	})
+		.then((response) => {
+			// 서버의 데이터를 가지고 오는데 성공하면 json으로 가져옴, 아니면 에러 띄우기
+			if (response.ok) {
+				return response.json();
+			} else throw new Error('서버가 동작하지 않았습니다.');
+		})
 		.then((data) => {
-			// 중복된 값이 있는지 확인
-			const isDuplicate = data.some((item) => item.id === newData.id);
-			return !isDuplicate;
+			// 서버 응답 처리
+			// 새로운 데이터를 plusData에 추가하여 최초 랜더링에 반영하도록 함
+			plusData.push(data);
+			renderPlusReview(ul, data);
 		})
-		.catch((error) => {
-			console.error('Error while fetching data:', error);
-			return false;
+		.catch((err) => {
+			// 오류 처리
+			console.error('오류 발생', err);
 		});
-};
-
-// 중복 여부를 확인한 후, 중복이 없는 경우에만 POST 요청 보냄
-isNotDuplicate(postData).then((isNotDuplicate) => {
-	if (isNotDuplicate) {
-		fetch(url, {
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json; charset=UTF-8',
-			},
-			body: JSON.stringify(postData),
-		})
-			.then((response) => {
-				if (response.ok) {
-					console.log('POST request successful');
-				} else {
-					console.error('POST request failed:', response);
-				}
-			})
-			.catch((error) => {
-				console.error('Error while sending POST request:', error);
-			});
-	} else {
-		console.log('Data is duplicate. Skip POST request.');
-	}
-});
-
-// if (isDuplicate) {
-// 	userDataReview
-// 		.post('http://localhost:3000/plusReview', keyPlusReview())
-// 		.then((response) => {
-// 			if (response.ok) {
-// 				console.log('ok');
-// 			} else {
-// 				console.log('no');
-// 			}
-// 		})
-// 		.catch((err) => console.log('에러', err));
-// } else {
-// 	console.log('중복있다');
-// }
-
-// 새로운 데이터 보내기
-// const less =
+}
 
 const ul = getNode('.review__plus');
-const answer = await userDataReview.get('http://localhost:3000/plusReview');
-const plusData = answer.data;
-console.log(plusData);
 
 plusData.forEach((item) => {
 	renderPlusReview(ul, item);

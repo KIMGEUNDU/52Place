@@ -20,7 +20,13 @@ async function createTheme(e) {
 
 	// li의 id값 가져오기
 	const index = attr(target, 'data-index');
-	const targetId = index.slice(-1);
+
+	let targetId;
+	if (index.length > 8) {
+		targetId = index.slice(-2);
+	} else {
+		targetId = index.slice(-1);
+	}
 	console.log(targetId);
 
 	if (!target) return;
