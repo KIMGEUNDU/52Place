@@ -28,3 +28,14 @@ function handleList(e) {
 list.forEach((item) => {
 	item.addEventListener('click', handleList);
 });
+
+//스크롤시 menuEnroll bg-color 변경
+const menuEnrollSection = document.querySelector('.menuEnroll');
+
+window.addEventListener('scroll', () => {
+	if (window.scrollY > 0) {
+		menuEnrollSection.style.backgroundColor = 'white';
+	} else {
+		menuEnrollSection.style.backgroundColor = '';
+	}
+});
