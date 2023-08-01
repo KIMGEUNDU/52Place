@@ -49,52 +49,73 @@
 			</section>
 
 			<!-- 리뷰 리스트 -->
-			<section class="mb-14 px-4 py-1">
-				<ul class="review__contents"></ul>
+			<section class="review__content px-4 py-1">
+				<ul class="review__list">
+					<li class="review relative flex h-[91px] list-none" data-index="1">
+						<figure class="review__preview h-[91px] w-[92px]">
+							<img
+								src="../assets/images/review4.png"
+								alt=""
+								class="review__previewImg rounded-l-2xl"
+								aria-labelledby="review__previewCap"
+							/>
+							<figcaption id="review__previewCap" class="sr-only">리뷰 미리보기 이미지</figcaption>
+						</figure>
+						<div class="review__wrap reviewBox">
+							<h2 class="review__title font-semibold">후타츠 홍대본점</h2>
+							<p class="review__content truncate">홍대에 있는 소바중에 제일 맛있어요!</p>
+							<span class="info__location text-contentTeriary"
+								>서울시 서교동 | <time datetime="04-01" class="info__date">4.1.토 방문</time></span
+							>
+							<button class="absolute right-[10px] top-[10px]">
+								<img src="../assets/icons/call.png" alt="전화걸기" class="fill-blue-500" />
+							</button>
+						</div>
+					</li>
+				</ul>
 			</section>
-		</main>
 
-		<!-- 네비게이션 -->
-		<nav class="fixed bottom-0 left-1/2 z-10 w-full max-w-xs -translate-x-1/2 bg-white">
-			<ul class="navList">
-				<li class="nav__item navWidth">
-					<a href="./map.html"
-						><img src="../assets/images/icons/map.png" class="navImg" alt="지도보기" />지도</a
-					>
-				</li>
-				<li class="nav__item navWidth">
-					<a href="#"
-						><img src="../assets/images/icons/save.png" class="navImg" alt="북마크보기" />저장</a
-					>
-				</li>
-				<li class="nav__item navWidth">
-					<a href="#"
-						><img
-							src="../assets/images/icons/subway.png"
-							class="navImg"
-							alt="대중교통 정보보기"
-						/>대중교통</a
-					>
-				</li>
-				<li class="nav__item navWidth">
-					<a href="#"
-						><img
-							src="../assets/images/icons/car.png"
-							class="navImg"
-							alt="내비게이션 정보 보기"
-						/>내비게이션</a
-					>
-				</li>
-				<li class="nav__item selectNavImg">
-					<a href="./themePage.html"
-						><img
-							src="../assets/images/icons/my.png"
-							class="navImg"
-							alt="마이 페이지로 이동"
-						/>MY</a
-					>
-				</li>
-			</ul>
-		</nav>
+			<nav class="fixed bottom-0 left-1/2 z-10 w-full max-w-xs -translate-x-1/2 bg-white">
+				<ul class="navList">
+					<li class="nav__item selectNavImg">
+						<a href="map.html"
+							><img src="../assets/images/icons/map.png" class="navImg" alt="지도보기" />지도</a
+						>
+					</li>
+					<li class="nav__item navWidth">
+						<a href="#"
+							><img src="../assets/images/icons/save.png" class="navImg" alt="북마크보기" />저장</a
+						>
+					</li>
+					<li class="nav__item navWidth">
+						<a href="#"
+							><img
+								src="../assets/images/icons/subway.png"
+								class="navImg"
+								alt="대중교통 정보보기"
+							/>대중교통</a
+						>
+					</li>
+					<li class="nav__item navWidth">
+						<a href="#"
+							><img
+								src="../assets/images/icons/car.png"
+								class="navImg"
+								alt="내비게이션 정보 보기"
+							/>내비게이션</a
+						>
+					</li>
+					<li class="nav__item navWidth">
+						<a href="./themePage.html"
+							><img
+								src="../assets/images/icons/my.png"
+								class="navImg"
+								alt="마이 페이지로 이동"
+							/>MY</a
+						>
+					</li>
+				</ul>
+			</nav>
+		</main>
 	</body>
 </html>
