@@ -30,7 +30,7 @@ module.exports = {
 				photoFalse: 'url(/assets/icons/photoactive=false.png)',
 				coverPhoto: 'url(/assets/icons/photo.png)',
 				check: 'url(/assets/icons/check.png)',
-				plus: 'url(/assets/icons/plus.png)',
+				plus: 'url(/assets/icons/reviewplus.png)',
 				arrowBlack: 'url(/assets/icons/arrow-right-black.png)',
 				pencil: 'url(/assets/icons/pencil.png)',
 				heart: 'url(/assets/icons/heart.png)',
