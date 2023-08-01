@@ -150,10 +150,6 @@ input[type='file'] {
 	@apply absolute right-5 top-4 rounded border p-1;
 }
 
-.couponUp {
-	@apply absolute right-4 top-[14px] inline-block h-3 w-3 rounded-3xl bg-white;
-}
-
 .menuList {
 	@apply flex justify-between pt-2 text-center shadow-bottom;
 }
@@ -199,6 +195,10 @@ input[type='file'] {
 
 .listSize {
 	@apply relative mb-2 h-36 w-[140px] rounded-xl px-2;
+}
+
+.listHidden {
+	@apply hidden;
 }
 
 .bookMark {
@@ -254,7 +254,7 @@ input[type='file'] {
 }
 
 .newListSize {
-	@apply flex justify-between rounded-xl bg-white px-4 py-6;
+	@apply mb-3 flex justify-between rounded-xl bg-white px-4 py-6 shadow-thumnail;
 }
 
 .photoAdd {
@@ -303,4 +303,20 @@ input[type='file'] {
 
 .uploadImg {
 	@apply h-[80px] w-[80px] rounded-md;
+}
+
+.mapHeartFalse {
+	@apply h-[18px] w-[18px] bg-mapHeartFalse bg-[left_top_0.1rem] bg-no-repeat;
+}
+
+.mapHeartTrue {
+	@apply h-[18px] w-[18px] bg-mapHeartTrue bg-[left_top_0.1rem] bg-no-repeat;
+}
+
+.selectNavImg {
+	@apply h-[57px] w-[66px] border-t-2 border-primary font-semibold text-primary;
+}
+
+.navWidth {
+	@apply h-[57px] w-[66px];
 }
