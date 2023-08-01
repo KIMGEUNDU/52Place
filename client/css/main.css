@@ -570,8 +570,8 @@ video {
   bottom: 4rem;
 }
 
-.right-2 {
-  right: 0.5rem;
+.right-5 {
+  right: 1.25rem;
 }
 
 .right-\[10px\] {
@@ -614,6 +614,10 @@ video {
 .my-5 {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
+}
+
+.-mt-4 {
+  margin-top: -1rem;
 }
 
 .-mt-\[13px\] {
@@ -1849,7 +1853,7 @@ body {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   padding-bottom: 1rem;
-  --tw-drop-shadow: drop-shadow(0 1px 1px rgb(0 0 0 / 0.05));
+  --tw-drop-shadow: drop-shadow(0 0.8px 0.6px rgba(0, 0, 0, 0.14));
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 

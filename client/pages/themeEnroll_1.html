@@ -4,16 +4,27 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" href="./../assets/favicon/오이올라간달오이.ico" />
+		<link rel="icon" href="/assets/favicon/오이올라간달오이.ico" />
 		<link
 			rel="stylesheet"
 			as="style"
 			crossorigin
 			href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
 		/>
-		<link rel="stylesheet" href="./../css/main.css" />
-		<script src="./../js/common/themeEnroll.js" type="module"></script>
-		<script src="../js/main.js" type="module"></script>
+		<script
+			type="text/javascript"
+			src="//dapi.kakao.com/v2/maps/sdk.js?appkey=8e319d2500bfed1880d2d7a1de300011"
+		></script>
+		<script src="/js/common/themeMap.js" type="module"></script>
+		<!-- services와 clusterer, drawing 라이브러리 불러오기 -->
+		<script
+			type="text/javascript"
+			src="//dapi.kakao.com/v2/maps/sdk.js?appkey=APIKEY&libraries=services,clusterer,drawing"
+		></script>
+
+		<link rel="stylesheet" href="/css/main.css" />
+		<script src="/js/common/themeEnroll.js" type="module"></script>
+		<script src="/js/main.js" type="module"></script>
 		<title>오이 플레이스</title>
 	</head>
 
@@ -21,10 +32,10 @@
 		<header class="relative z-20 m-auto h-10 max-w-xs bg-white">
 			<div class="">
 				<span class="headerTime">3:28</span>
-				<img class="headerPosition" src="../assets/images/icons/position.png" alt="위치 아이콘" />
-				<img class="headerVector" src="../assets/images/icons/vector.png" alt="네트워크 신호" />
+				<img class="headerPosition" src="/assets/images/icons/position.png" alt="위치 아이콘" />
+				<img class="headerVector" src="/assets/images/icons/vector.png" alt="네트워크 신호" />
 				<span class="headerLte">LTE</span>
-				<img class="headerBattery" src="../assets/images/icons/battery.png" alt="배터리 함량" />
+				<img class="headerBattery" src="/assets/images/icons/battery.png" alt="배터리 함량" />
 			</div>
 		</header>
 
@@ -71,7 +82,7 @@
 				<div class="-mt-[13px] rounded-t-lg bg-white">
 					<div class="mx-4 mb-3 flex flex-row items-center pt-4">
 						<div class="mr-2 h-[54px] w-[54px] rounded-full border-4 border-primary bg-white">
-							<img class="p-1" src="./../assets/icons/logo.png" alt="프로필 사진" />
+							<img class="p-1" src="/assets/icons/logo.png" alt="프로필 사진" />
 						</div>
 						<ul>
 							<li class="font-semibold">COOLION</li>
@@ -92,20 +103,21 @@
 
 				<ul class="enroll__list"></ul>
 
-				<section class="map px-4">
+				<section class="map relative h-[200px] w-full px-4">
+					<button class="absolute right-5 top-2 z-10 block" onclick="location.href='map.html'">
+						<img src="/assets/icons/spread.png" alt="지도 확대 아이콘" />
+					</button>
 					<div
-						class="relative mb-10 h-[200px] w-full rounded-lg bg-slate-100 bg-[url('/assets/images/location.png')] bg-cover"
-					>
-						<button class="absolute right-2 top-2 block">
-							<img src="/assets/icons/spread.png" alt="지도 확대 아이콘" />
-						</button>
-					</div>
+						id="map"
+						class="-mt-4 h-[200px] w-full rounded-lg bg-slate-100 bg-[url('/assets/images/location.png')] bg-cover"
+					></div>
 				</section>
+				<div><br /><br /></div>
 			</section>
 
 			<section class="sticky bottom-16 z-20">
 				<button class="ml-64">
-					<img src="./../assets/icons/plus.png" alt="icon-lg-plus" />
+					<img src="/assets/icons/plus.png" alt="icon-lg-plus" />
 				</button>
 			</section>
 
@@ -113,27 +125,35 @@
 				<nav class="flex">
 					<ul class="navList">
 						<li class="nav__item h-[57px] w-[48px]">
-							<a href="./"
-								><img src="../assets/images/icons/map.png" class="navImg" alt="" />지도</a
+							<a href="#"
+								><img src="/assets/images/icons/map.png" class="navImg" alt="지도" />지도</a
 							>
 						</li>
 						<li class="nav__item h-[57px] w-[48px]">
-							<a href="./"
-								><img src="../assets/images/icons/save.png" class="navImg" alt="" />저장</a
+							<a href="#"
+								><img src="/assets/images/icons/save.png" class="navImg" alt="저장" />저장</a
 							>
 						</li>
 						<li class="nav__item h-[57px] w-[66px]">
-							<a href="./"
-								><img src="../assets/images/icons/subway.png" class="navImg" alt="" />대중교통</a
+							<a href="#"
+								><img
+									src="/assets/images/icons/subway.png"
+									class="navImg"
+									alt="대중교통"
+								/>대중교통</a
 							>
 						</li>
 						<li class="nav__item h-[57px] w-[76px]">
-							<a href="./"
-								><img src="../assets/images/icons/car.png" class="navImg" alt="" />내비게이션</a
+							<a href="#"
+								><img
+									src="/assets/images/icons/car.png"
+									class="navImg"
+									alt="내비게이션"
+								/>내비게이션</a
 							>
 						</li>
 						<li class="nav__item h-[57px] w-[48px]">
-							<a href="./"><img src="../assets/images/icons/my.png" class="navImg" alt="" />MY</a>
+							<a href="#"><img src="/assets/images/icons/my.png" class="navImg" alt="MY" />MY</a>
 						</li>
 					</ul>
 				</nav>

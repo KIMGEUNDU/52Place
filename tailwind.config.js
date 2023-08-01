@@ -22,6 +22,9 @@ module.exports = {
 				bottom: '0px 1px 5px 0px rgba(0, 0, 0, 0.25)',
 				thumnail: '1px 4px 4px 0px rgba(0, 0, 0, 0.4);',
 			},
+			dropShadow: {
+				sm: '0 0.8px 0.6px rgba(0, 0, 0, 0.14)',
+			},
 			backgroundImage: {
 				cakeImage: 'url(/assets/images/cake.png)',
 				burgerFalse: 'url(/assets/icons/burgeractive=false.png)',
