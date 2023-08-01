@@ -34,16 +34,20 @@ body {
 	@apply flex w-16 flex-row-reverse bg-photoFalse bg-left bg-no-repeat p-3 text-gray-400 active:bg-photoTrue active:text-black;
 }
 
-.input {
-	@apply h-[46px] w-[288px] border-b border-contentSecondary bg-transparent focus:outline-none;
+.coverInputTitle {
+	@apply h-[46px] w-72 border-b border-contentSecondary bg-transparent font-semibold placeholder:bg-transparent placeholder:text-2xl placeholder:text-white focus:outline-none;
 }
 
 .enterButton {
-	@apply rounded-full border bg-check bg-[center_left_8px] bg-no-repeat px-3 py-2 pl-8 text-right text-xs font-semibold text-white;
+	@apply mr-1 rounded-full border bg-check bg-[center_left_8px] bg-no-repeat px-3 py-2 pl-8 text-right text-xs font-semibold text-white;
+}
+
+.activeButton {
+	@apply border-0 bg-primary;
 }
 
 .coverButton {
-	@apply mx-auto mt-[98px] flex rounded-full border bg-coverPhoto bg-[center_left_12px] bg-no-repeat px-3 py-2 pl-9 text-right;
+	@apply mx-auto mt-[98px] flex w-[136px] cursor-pointer rounded-full border bg-coverPhoto bg-[center_left_12px] bg-no-repeat px-3 py-2 pl-9 text-right;
 }
 
 .plusReview {
@@ -209,10 +213,9 @@ body {
 	@apply absolute bottom-4 left-2 text-base;
 }
 
-
-.input {
+/* .input {
 	@apply h-[46px] w-[288px] border-b border-contentSecondary bg-transparent focus:outline-none;
-}
+} */
 
 .coverbButton {
 	@apply mx-auto mt-[80px] flex rounded-full border bg-coverPhoto bg-[center_left_12px] bg-no-repeat px-3 py-2 pl-9 text-right;
@@ -222,9 +225,9 @@ body {
 	@apply ml-auto mt-[72px] flex rounded-full border bg-subway bg-[center_left_12px] bg-no-repeat px-3 py-2 pl-9 text-right text-sm;
 }
 
-.enterButton {
+/* .enterButton {
 	@apply rounded-full border bg-check bg-[center_left_8px] bg-no-repeat px-3 py-2 pl-8 text-right text-xs font-semibold text-white;
-}
+} */
 
 .activeEnterButton {
 	@apply rounded-full bg-light3  bg-check bg-[center_left_8px] bg-no-repeat px-3 py-2 pl-8 text-right text-sm font-semibold text-white;
@@ -240,4 +243,68 @@ body {
 
 .heartButton {
 	@apply absolute bottom-9 right-4 h-[30px] w-[30px] items-center bg-heart bg-[center] bg-no-repeat;
+}
+
+.callButton {
+	@apply absolute right-[10px] top-[10px];
+}
+
+.reviewContent {
+	@apply relative mb-3 flex h-[92px] cursor-pointer list-none;
+}
+
+.figureSize {
+	@apply h-[92px] w-[92px] rounded-l-2xl;
+}
+
+.reviewDetail {
+	@apply truncate;
+}
+
+.reviewTitle {
+	@apply font-semibold;
+}
+
+.coverInputSub {
+	@apply mt-3 h-6 w-72 resize-none overflow-hidden border-b border-contentSecondary bg-transparent text-xs placeholder:text-xs placeholder:text-contentTeriary focus:outline-none;
+}
+
+.inputForm {
+	@apply relative mx-auto mt-8 flex min-h-screen max-w-xs flex-col;
+}
+
+input[type='file'] {
+	display: none;
+}
+
+.headingBox {
+	@apply fixed left-1/2 top-8 flex w-full max-w-xs -translate-x-1/2 items-center justify-between bg-transparent p-2;
+}
+
+.coverImg {
+	@apply absolute -z-[1] h-[400px] w-full object-cover text-center;
+}
+
+.coverBg {
+	@apply bg-gray7;
+}
+
+.scrollheading {
+	@apply bg-gray7 duration-150 ease-in;
+}
+
+.plusBox {
+	@apply -mt-[46px] rounded-t-xl bg-white px-[22px] pb-20 pt-[18px];
+}
+
+.formBox {
+	@apply flex h-[348px] flex-col px-4 pb-96 pt-16 text-white;
+}
+
+.navWidth {
+	@apply h-[57px] w-[66px];
+}
+
+.selectNavImg {
+	@apply h-[57px] w-[66px] border-t-2 border-primary font-semibold text-primary;
 }

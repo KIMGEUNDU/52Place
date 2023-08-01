@@ -1,21 +1,26 @@
 <!doctype html>
-<html lang="ko">
+<html lang="ko-KR">
 	<head>
 		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="shortcut icon" href="../assets/favicon/오이올라간달오이.ico" type="image/x-icon" />
+		<link
+			rel="icon"
+			href="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+			type="image/xml+svg"
+		/>
 		<link
 			rel="stylesheet"
 			as="style"
 			crossorigin
 			href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
 		/>
-
 		<link rel="stylesheet" href="./../css/main.css" />
-		<script src="../js/common/plusReview.js" type="module"></script>
+		<script src="../js/common/themeEnroll_new.js" type="module"></script>
 		<title>오이 플레이스</title>
 	</head>
-	<body>
+
+	<body class="bg-slate-100">
 		<header class="fixed left-1/2 top-0 z-10 h-8 w-full max-w-xs -translate-x-1/2 bg-white">
 			<span class="headerTime">3:28</span>
 			<img class="headerPosition" src="../assets/images/icons/position.png" alt="위치 아이콘" />
@@ -24,11 +29,10 @@
 			<img class="headerBattery" src="../assets/images/icons/battery.png" alt="배터리 함량" />
 		</header>
 
-		<div class="cover__container inputForm coverBg">
-			<h1 class="sr-only">리뷰 테마 만들기</h1>
+		<main class="relative m-auto mb-10 mt-8 max-w-xs flex-wrap bg-white">
+			<h1 class="hidden">themeEnroll</h1>
 
-			<!-- input -->
-			<div class="form__container">
+			<div class="form__container bg-gray7">
 				<form action="#" class="coverForm formBox">
 					<fieldset>
 						<legend class="sr-only">리뷰 작성 폼</legend>
@@ -86,96 +90,73 @@
 				</form>
 			</div>
 
-			<!-- review -->
-			<section class="plus__container plusBox activeBox flex-grow">
+			<section class="relative mx-4 pb-20 pt-4 drop-shadow-xl">
 				<div class="mb-3 flex justify-between">
 					<div class="flex font-semibold">
 						<h2 class="">리뷰</h2>
-						<span class="ml-1 text-info">0</span>
+						<span class="ml-1 text-info">2</span>
 						<span class="text-contentTeriary">/10</span>
 					</div>
 					<ul class="flex items-center">
-						<li class="flex flex-row gap-1 text-xs text-contentTeriary">
+						<li class="flex flex-row gap-1 text-xs text-contentSecondary">
 							<button>임시저장 |</button>
 							<button>순서변경 |</button>
 							<button>전체삭제</button>
 						</li>
 					</ul>
 				</div>
-				<h3 class="sr-only">리뷰작성</h3>
-				<div class="mt-28 flex flex-col items-center justify-center">
-					<p class="text-center text-xs leading-5 text-contentTeriary">
-						내가 작성한 리뷰를 추가해<br />새로운 테마 리스트를 만들어보세요.
-					</p>
-					<a href="reviewChoice.html" class="plusReview">리뷰 추가하기</a>
-				</div>
+				<ul class="enroll__list review__plus"></ul>
 			</section>
 
-			<nav class="fixed bottom-0 left-1/2 z-10 w-full max-w-xs -translate-x-1/2 bg-white">
-				<ul class="navList">
-					<li class="nav__item navWidth">
-						<a href="./"
-							><img src="../assets/images/icons/map.png" class="navImg" alt="지도보기" />지도</a
-						>
-					</li>
-					<li class="nav__item navWidth">
-						<a href="./"
-							><img src="../assets/images/icons/save.png" class="navImg" alt="북마크보기" />저장</a
-						>
-					</li>
-					<li class="nav__item navWidth">
-						<a href="./"
-							><img
-								src="../assets/images/icons/subway.png"
-								class="navImg"
-								alt="대중교통 정보보기"
-							/>대중교통</a
-						>
-					</li>
-					<li class="nav__item navWidth">
-						<a href="./"
-							><img
-								src="../assets/images/icons/car.png"
-								class="navImg"
-								alt="내비게이션 정보 보기"
-							/>내비게이션</a
-						>
-					</li>
-					<li class="nav__item selectNavImg">
-						<a href="./themePage.html"
-							><img
-								src="../assets/images/icons/my.png"
-								class="navImg"
-								alt="마이 페이지로 이동"
-							/>MY</a
-						>
-					</li>
-				</ul>
-			</nav>
+			<section>
+				<div class="fixed bottom-10 right-2">
+					<a href="reviewChoice.html">
+						<img src="./../assets/icons/plus.png" alt="icon-lg-plus" />
+					</a>
+				</div>
+			</section>
+		</main>
 
-			<!-- <nav class="fixed bottom-0 left-1/2 z-10 w-full max-w-xs -translate-x-1/2 bg-white">
-				<ul class="navList navWidth">
-					<li class="nav__item h-[57px] w-[48px]">
-						<a href="./"><img src="../assets/images/icons/map.png" class="navImg" alt="" />지도</a>
-					</li>
-					<li class="nav__item h-[57px] w-[48px]">
-						<a href="./"><img src="../assets/images/icons/save.png" class="navImg" alt="" />저장</a>
-					</li>
-					<li class="nav__item h-[57px] w-[66px]">
-						<a href="./"
-							><img src="../assets/images/icons/subway.png" class="navImg" alt="" />대중교통</a
-						>
-					</li>
-					<li class="nav__item h-[57px] w-[76px]">
-						<a href="./"
-							><img src="../assets/images/icons/car.png" class="navImg" alt="" />내비게이션</a
-						>
-					</li>
-					<li class="nav__item selectNavImg">
-						<a href="./"><img src="../assets/images/icons/my.png" class="navImg" alt="" />MY</a>
-					</li>
-				</ul>
-			</nav> -->
-		</div>
+		<nav class="fixed bottom-0 left-1/2 z-10 w-full max-w-xs -translate-x-1/2 bg-white">
+			<ul class="navList">
+				<li class="nav__item navWidth">
+					<a href="./"
+						><img src="../assets/images/icons/map.png" class="navImg" alt="지도보기" />지도</a
+					>
+				</li>
+				<li class="nav__item navWidth">
+					<a href="./"
+						><img src="../assets/images/icons/save.png" class="navImg" alt="북마크보기" />저장</a
+					>
+				</li>
+				<li class="nav__item navWidth">
+					<a href="./"
+						><img
+							src="../assets/images/icons/subway.png"
+							class="navImg"
+							alt="대중교통 정보보기"
+						/>대중교통</a
+					>
+				</li>
+				<li class="nav__item navWidth">
+					<a href="./"
+						><img
+							src="../assets/images/icons/car.png"
+							class="navImg"
+							alt="내비게이션 정보 보기"
+						/>내비게이션</a
+					>
+				</li>
+				<li class="nav__item selectNavImg">
+					<a href="./themePage.html"
+						><img
+							src="../assets/images/icons/my.png"
+							class="navImg"
+							alt="마이 페이지로 이동"
+						/>MY</a
+					>
+				</li>
+			</ul>
+		</nav>
 	</body>
 </html>
