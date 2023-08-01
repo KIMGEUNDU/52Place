@@ -225,10 +225,6 @@ body {
 	@apply rounded-full bg-light3  bg-check bg-[center_left_8px] bg-no-repeat px-3 py-2 pl-8 text-right text-sm font-semibold text-white;
 }
 
-.enterButton {
-	@apply rounded-full bg-light3  bg-check bg-[center_left_8px] bg-no-repeat px-3 py-2 pl-8 text-right text-sm font-semibold text-white;
-}
-
 .editButton {
 	@apply w-full rounded-full bg-light3 bg-pencil bg-[center_left_104px] bg-no-repeat py-2 pl-6 text-sm font-semibold text-white;
 }
