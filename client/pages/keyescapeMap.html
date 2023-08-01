@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ko-KR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" href="../assets/favicon/오이올라간달오이.ico" />
+		<link
+			rel="stylesheet"
+			as="style"
+			crossorigin
+			href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
+		/>
+		<link rel="stylesheet" href="./../css/main.css" />
+		<script
+			type="text/javascript"
+			src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c3373a98c0bad3b2b26927966c736ca2"
+		></script>
+		<script src="./../js/common/keyescapeMap.js" type="module"></script>
+		<title>오이플레이스</title>
+	</head>
+
+	<body>
+		<header class="sticky top-0 z-20 m-auto h-10 max-w-xs bg-white">
+			<span class="headerTime"></span>
+			<img class="headerPosition" src="../assets/images/icons/position.png" alt="위치 아이콘" />
+			<img class="headerVector" src="../assets/images/icons/vector.png" alt="네트워크 신호" />
+			<span class="headerLte">LTE</span>
+			<img class="headerBattery" src="../assets/images/icons/battery.png" alt="배터리 함량" />
+		</header>
+
+		<main class="relative m-auto max-w-xs bg-grayBg">
+			<div class="relative">
+				<div class="h-screen" id="map"></div>
+				<button
+					onclick="location.href='themePage.html'"
+					class="absolute left-2 top-2 z-10 h-6 w-6 bg-mapBefore bg-contain bg-no-repeat"
+				></button>
+			</div>
+			<div class="absolute bottom-14 left-0 z-10 w-full bg-white">
+				<div class="flex justify-between gap-1">
+					<a href="#">
+						<img
+							class="h-[155px] w-[155px] rounded-lg"
+							src="https://www.keyescape.co.kr/file/theme_info/37_a.jpg"
+							alt="메모리컴퍼니"
+						/>
+					</a>
+					<a href="#">
+						<img
+							class="h-[155px] w-[155px] rounded-lg"
+							src="https://blog.kakaocdn.net/dn/Xq843/btqYE6OCLIp/PRByQE2rjbqrNftKbx75jK/img.jpg"
+							alt="삐릿뽀"
+						/>
+					</a>
+				</div>
+				<div class="mt-4 text-center">
+					<p class="font-semibold">
+						키이스케이프 메모리컴퍼니 <span class="text-xs text-contentTeriary">방탈출카페</span>
+					</p>
+					<div>
+						<button class="mapHeartTrue"></button>
+						<a href="#"
+							><span class="font-semibold">4.47<span class="text-contentTeriary">/5</span></span></a
+						>
+						<span class="text-xs text-primary"
+							>방문자리뷰 <a href="#">2,333</a> · 블로그리뷰 <a href="#">1,063</a></span
+						>
+					</div>
+					<div class="flex h-[57px] justify-evenly pb-7 pt-2">
+						<a href="#">
+							<img
+								class="m-auto h-[30px] w-[82px]"
+								src="../assets/icons/mapstart.svg"
+								alt="네비게이션 출발지점"
+							/>
+						</a>
+						<a href="#">
+							<img
+								class="m-auto h-[30px] w-[82px]"
+								src="../assets/icons/mapend.svg"
+								alt="네비게이션 도착지점"
+							/>
+						</a>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<nav class="fixed bottom-0 left-1/2 z-10 w-full max-w-xs -translate-x-1/2 bg-white">
+			<ul class="navList">
+				<li class="nav__item selectNavImg">
+					<a href="map.html"
+						><img src="../assets/images/icons/map.png" class="navImg" alt="지도보기" />지도</a
+					>
+				</li>
+				<li class="nav__item navWidth">
+					<a href="#"
+						><img src="../assets/images/icons/save.png" class="navImg" alt="북마크보기" />저장</a
+					>
+				</li>
+				<li class="nav__item navWidth">
+					<a href="#"
+						><img
+							src="../assets/images/icons/subway.png"
+							class="navImg"
+							alt="대중교통 정보보기"
+						/>대중교통</a
+					>
+				</li>
+				<li class="nav__item navWidth">
+					<a href="#"
+						><img
+							src="../assets/images/icons/car.png"
+							class="navImg"
+							alt="내비게이션 정보 보기"
+						/>내비게이션</a
+					>
+				</li>
+				<li class="nav__item navWidth">
+					<a href="./themePage.html"
+						><img
+							src="../assets/images/icons/my.png"
+							class="navImg"
+							alt="마이 페이지로 이동"
+						/>MY</a
+					>
+				</li>
+			</ul>
+		</nav>
+	</body>
+</html>

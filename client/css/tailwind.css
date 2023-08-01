@@ -22,6 +22,10 @@ body {
 		sans-serif;
 }
 
+input[type='file'] {
+	display: none;
+}
+
 .reviewBox {
 	@apply relative box-border flex w-[198px] flex-col justify-center gap-1 rounded-r-2xl bg-white px-3 py-3 text-xs;
 }
@@ -115,7 +119,7 @@ body {
 
 /*header*/
 .headerTime {
-	@apply absolute my-[7px] ml-[18px] text-base font-semibold;
+	@apply absolute my-[7px] ml-3 text-base font-semibold;
 }
 
 .headerPosition {
@@ -150,16 +154,16 @@ body {
 	@apply absolute right-5 top-4 rounded border p-1;
 }
 
-.couponUp {
-	@apply absolute right-4 top-[14px] inline-block h-3 w-3 rounded-3xl bg-white;
-}
-
 .menuList {
-	@apply flex justify-between border-b-2 pt-2 text-center shadow-bottom;
+	@apply flex justify-between pt-2 text-center shadow-bottom;
 }
 
 .menuListItem {
 	@apply h-8 w-1/4 py-1 font-semibold text-notSelect active:text-primary;
+}
+
+.menuListItemReview {
+	@apply h-8 w-1/4 py-1 font-semibold text-primary;
 }
 .reviewImage1 {
 	@apply h-[184px] w-[140px] rounded-2xl bg-cakeImage bg-cover bg-no-repeat shadow-thumnail;
@@ -169,8 +173,12 @@ body {
 	@apply absolute left-3 top-3 rounded bg-white px-1 text-xs font-semibold text-contentSecondary;
 }
 
-.thumnailImage {
-	@apply rounded bg-thumnail p-2 font-semibold;
+.thumnailImage1 {
+	@apply h-[42px] w-[42px] rounded bg-coffee bg-cover;
+}
+
+.thumnailImage2 {
+	@apply h-[42px] w-[42px] rounded bg-sakura bg-cover;
 }
 
 .reviewImage2 {
@@ -193,6 +201,10 @@ body {
 	@apply relative mb-2 h-36 w-[140px] rounded-xl px-2;
 }
 
+.listHidden {
+	@apply hidden;
+}
+
 .bookMark {
 	@apply absolute right-2 top-2 h-5 w-4;
 }
@@ -213,12 +225,21 @@ body {
 	@apply absolute bottom-4 left-2 text-base;
 }
 
+
+.input {
+	@apply h-[46px] w-[288px] border-b border-contentSecondary bg-transparent focus:outline-none;
+}
+
 .coverbButton {
 	@apply mx-auto mt-[80px] flex rounded-full border bg-coverPhoto bg-[center_left_12px] bg-no-repeat px-3 py-2 pl-9 text-right;
 }
 
 .coverButtonMap {
 	@apply ml-auto mt-[72px] flex rounded-full border bg-subway bg-[center_left_12px] bg-no-repeat px-3 py-2 pl-9 text-right text-sm;
+}
+
+.enterButton {
+	@apply rounded-full border bg-check bg-[center_left_8px] bg-no-repeat px-3 py-2 pl-8 text-right text-xs font-semibold text-white;
 }
 
 .activeEnterButton {

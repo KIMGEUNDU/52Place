@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="ko-KR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" href="./../assets/favicon/오이올라간달오이.ico" />
+		<link
+			rel="stylesheet"
+			as="style"
+			crossorigin
+			href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
+		/>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js" defer></script>
+		<link rel="stylesheet" href="./../css/main.css" />
+		<script src="./../js/common/visiteLike1.js" type="module"></script>
+		<title>오이 플레이스</title>
+	</head>
+
+	<body>
+		<header class="sticky top-0 z-10 m-auto h-10 max-w-xs bg-white">
+			<span class="headerTime"></span>
+			<img class="headerPosition" src="../assets/images/icons/position.png" alt="위치 아이콘" />
+			<img class="headerVector" src="../assets/images/icons/vector.png" alt="네트워크 신호" />
+			<span class="headerLte">LTE</span>
+			<img class="headerBattery" src="../assets/images/icons/battery.png" alt="배터리 함량" />
+		</header>
+		<main class="m-auto max-w-xs bg-white">
+			<form action="#" enctype="multipart/form-data" method="post" name="newReview">
+				<!-- 리뷰 장소 -->
+				<fieldset class="mt-3 border-b border-l-grayBg px-4 pb-3">
+					<legend class="text-xs font-semibold">키이스케이프 메모리컴퍼니</legend>
+					<span class="text-xs text-contentTeriary">2023.05.28 (일) 3번째 방문</span>
+				</fieldset>
+				<!-- 이런 곳이 마음에 든다면 -->
+				<fieldset class="mb-3 mt-10 px-[65px] py-3 text-center">
+					<legend class="font-semibold">이 곳이 마음에 든다면,</legend>
+					<p class="pb-2 text-xs text-contentTeriary">
+						'좋아요'를 누르고 취향이 비슷한 사람을 추천받으세요.
+					</p>
+					<button type="button" class="likeBtn">❤️ 이런 곳 좋아요!</button>
+				</fieldset>
+				<!-- 어떤점이 좋았나요 -->
+				<div class="bg-grayBg px-4 py-6 text-center">
+					<p class="pb-2 font-semibold">어떤 점이 좋았나요? (1개~5개)</p>
+					<p class="pb-2 text-xs font-semibold text-contentTeriary">
+						이 장소에 어울리는 키워드를 골라주세요.
+					</p>
+				</div>
+				<!-- 스와이퍼 부분 -->
+				<div class="swiper m-auto h-[260px] bg-grayBg">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide choiceBtnBox">
+							<button type="button" class="choiceBtn">💬 스토리가 탄탄해요</button>
+							<button type="button" class="choiceBtn">😝 재미있는 테마가 많아요</button>
+							<button type="button" class="choiceBtn">🤓 문제가 논리적이에요</button>
+							<button type="button" class="choiceBtn">💡 문제가 신선해요</button>
+							<button type="button" class="choiceBtn">💚 장치가 다양해요</button>
+						</div>
+						<div class="swiper-slide choiceBtnBox">
+							<button type="button" class="choiceBtn">💖 친절해요</button>
+							<button type="button" class="choiceBtn">✨ 시설이 깔끔해요</button>
+							<button type="button" class="choiceBtn">🪙 가성비가 좋아요</button>
+							<button type="button" class="choiceBtn">🅿️ 주차하기 편해요</button>
+						</div>
+						<div class="swiper-slide choiceBtnBox">
+							<button type="button" class="choiceBtn">😌 공포감이 낮아요</button>
+							<button type="button" class="choiceBtn">😱 공포감이 높아요</button>
+							<button type="button" class="choiceBtn">😮 컨셉이 독특해요</button>
+							<button type="button" class="choiceBtn">선택할 키워드가 없어요</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- 사진첨부 -->
+				<div class="photo__upload relative mb-[30px] mt-[34px] text-center">
+					<p class="mb-4 font-semibold">리뷰를 남겨주세요</p>
+					<label for="review__photoFile" class="photoAdd">
+						사진 추가<span class="ml-1 text-contentTeriary">최대 3장</span>
+					</label>
+					<input
+						type="file"
+						name="review__photoFile"
+						id="review__photoFile"
+						multiple
+						accept="image/*"
+					/>
+					<div class="upload__div"></div>
+				</div>
+
+				<fieldset>
+					<div class="relative px-4">
+						<textarea
+							name="reviewText"
+							id="review__text"
+							cols="30"
+							rows="10"
+							minlength="30"
+							maxlength="400"
+							placeholder="리뷰를 작성해주세요"
+							class="reviewTextArea"
+							required
+						></textarea>
+						<p class="inputLength"><span class="reviewLength text-black">0</span>/400</p>
+					</div>
+					<div class="flex justify-between px-4 pb-16 pt-4">
+						<button type="button" class="text-xs">리뷰 작성 유의사항</button>
+						<button type="submit" class="newReviewSubmit">등록하기</button>
+					</div>
+				</fieldset>
+			</form>
+		</main>
+		<nav class="fixed bottom-0 left-1/2 z-10 w-full max-w-xs -translate-x-1/2 bg-white">
+			<ul class="navList">
+				<li class="nav__item navWidth">
+					<a href="map.html"
+						><img src="../assets/images/icons/map.png" class="navImg" alt="지도보기" />지도</a
+					>
+				</li>
+				<li class="nav__item navWidth">
+					<a href="#"
+						><img src="../assets/images/icons/save.png" class="navImg" alt="북마크보기" />저장</a
+					>
+				</li>
+				<li class="nav__item navWidth">
+					<a href="#"
+						><img
+							src="../assets/images/icons/subway.png"
+							class="navImg"
+							alt="대중교통 정보보기"
+						/>대중교통</a
+					>
+				</li>
+				<li class="nav__item navWidth">
+					<a href="#"
+						><img
+							src="../assets/images/icons/car.png"
+							class="navImg"
+							alt="내비게이션 정보 보기"
+						/>내비게이션</a
+					>
+				</li>
+				<li class="nav__item selectNavImg">
+					<a href="./themePage.html"
+						><img
+							src="../assets/images/icons/my.png"
+							class="navImg"
+							alt="마이 페이지로 이동"
+						/>MY</a
+					>
+				</li>
+			</ul>
+		</nav>
+	</body>
+</html>
