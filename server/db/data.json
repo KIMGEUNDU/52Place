@@ -160,11 +160,7 @@
       "uniqueId": "813142ag2f"
     }
 	],
-	"theme": [],
-	"plusReview": [],
-}
-
-	"save": [
+  "save": [
 		{
 			"id": "1",
 			"name": "구름애",
@@ -260,5 +256,7 @@
 			"name": "비트포비아",
 			"latlng": "37.549541, 126.917323"
 		}
-	]
+	],
+	"theme": [],
+	"plusReview": []
 }
