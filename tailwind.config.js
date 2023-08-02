@@ -39,6 +39,7 @@ module.exports = {
 				pencil: 'url(/assets/icons/pencil.png)',
 				heart: 'url(/assets/icons/heart.png)',
 				subway: 'url(/assets/icons/subway.png)',
+				subwaywhite: 'url(/assets/icons/subwaywhite.png)',
 				reviewplus: 'url(/assets/icons/reviewplus.png)',
 				coffee: 'url(/assets/images/imagefieldfeed.png)',
 				sakura: 'url(/assets/images/reviewpost.png)',
