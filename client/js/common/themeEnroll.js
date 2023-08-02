@@ -29,13 +29,52 @@ list.forEach((item) => {
 	item.addEventListener('click', handleList);
 });
 
-//스크롤시 menuEnroll bg-color 변경
-const menuEnrollSection = document.querySelector('.menuEnroll');
+// 스크롤시 menuEnroll bg-color 변경
+const menuEnrollSection = getNode('.menuEnroll');
+const scrollArrowImage = document.getElementById('scrollArrowImage');
+
+// 이미지 링크를 여기에 추가
+const defaultImageSrc = '/assets/icons/arrowwhite.png';
+const scrolledImageSrc = '/assets/icons/arrowblack.png';
 
 window.addEventListener('scroll', () => {
 	if (window.scrollY > 0) {
 		menuEnrollSection.style.backgroundColor = 'white';
+		scrollArrowImage.src = scrolledImageSrc;
 	} else {
 		menuEnrollSection.style.backgroundColor = '';
+		scrollArrowImage.src = defaultImageSrc;
 	}
 });
+
+//input
+// function updateLength(inputElement, targetElement) {
+// 	const length = inputElement.value.length;
+// 	getNode(targetElement).textContent = length;
+// }
+
+// 전체삭제
+function deleteAllUlElements() {
+	const ulElements = document.querySelectorAll('.enroll__list > li');
+	ulElements.forEach((liElement) => {
+		liElement.parentNode.removeChild(liElement);
+	});
+
+	// 리뷰 카운트를 0으로 설정
+	const reviewCountElement = document.querySelector('.reviewAll__count');
+	if (reviewCountElement) {
+		reviewCountElement.textContent = '0';
+	}
+}
+
+const deleteButton = document.getElementById('deleteButton');
+deleteButton.addEventListener('click', deleteAllUlElements);
+
+//header 시간 바꾸기
+const headerTime = getNode('.headerTime');
+headerTime.textContent = new Date().toLocaleTimeString('ko-KR').slice(3, -3);
+
+setInterval(() => {
+	let time = new Date().toLocaleTimeString('ko-KR');
+	headerTime.textContent = time.slice(3, -3);
+}, 60000);
