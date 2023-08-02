@@ -94,8 +94,8 @@ async function renderlogin() {
 				const membership = await userDataReview.post('http://localhost:3000/login', data);
 				//const uniqueIdSave = userData.uniqueId;
 				//console(userData);
-				localStorage.setItem('uniqueId:',data.uniqueId);
-				console.log(data.uniqueId);
+				localStorage.setItem('uniqueId',data.uniqueId);
+				//console.log(data.uniqueId);
 				let link = 'login.html';
 				location.href = link;
 			}
