@@ -1,4 +1,12 @@
-import { getNode, insertLast, renderPlusReview, userDataReview } from '../../lib/index.js';
+import {
+	addClass,
+	attr,
+	getNode,
+	removeClass,
+	renderCountReview,
+	renderPlusReview,
+	userDataReview,
+} from '../../lib/index.js';
 
 function getUrlParameter(name) {
 	const urlParams = new URLSearchParams(window.location.search);
@@ -70,6 +78,11 @@ if (hasDuplicateIndex) {
 			// 새로운 데이터를 plusData에 추가하여 최초 랜더링에 반영하도록 함
 			plusData.push(data);
 			renderPlusReview(ul, data);
+
+			// 데이터의 갯수를 파악해 리뷰 개수 랜더링
+			const count = getNode('.review__count');
+			const reviewCount = plusData.length;
+			renderCountReview(count, reviewCount);
 		})
 		.catch((err) => {
 			// 오류 처리
@@ -82,3 +95,63 @@ const ul = getNode('.review__plus');
 plusData.forEach((item) => {
 	renderPlusReview(ul, item);
 });
+
+/* -------------------------------------------------------------------------- */
+// 스크롤시 헤더 제어
+function handleHeadBtn() {
+	const header = getNode('.heading');
+	const btn = getNode('.enrollBtn');
+	const backImg = getNode('.backBtn');
+	// 스크롤된 window의 현재 y좌표 값
+	const scrollY = window.scrollY;
+	// 헤더의 사이즈 찾기
+	const headerHeight = header.getBoundingClientRect().height;
+
+	// y좌표 값이 헤더의 높이보다 커지면 클래스 추가, 아니면 삭제
+	if (scrollY > headerHeight) {
+		addClass(header, 'scrollheadingWhite');
+		addClass(btn, 'activeButton');
+		attr(backImg, 'src', '../assets/icons/leftblack.png');
+	} else {
+		removeClass(header, 'scrollheadingWhite');
+		removeClass(btn, 'activeButton');
+		attr(backImg, 'src', '../assets/icons/leftwhite.png');
+	}
+}
+
+window.addEventListener('scroll', handleHeadBtn);
+
+/* -------------------------------------------------------------------------- */
+
+//header 시간 바꾸기
+const headerTime = getNode('.headerTime');
+headerTime.textContent = new Date().toLocaleTimeString('ko-KR').slice(3, -3);
+
+setInterval(() => {
+	let time = new Date().toLocaleTimeString('ko-KR');
+	headerTime.textContent = time.slice(3, -3);
+}, 60000);
+
+/* -------------------------------------------------------------------------- */
+// const list = getNode('.enroll__list');
+// function deleteList(e) {
+// 	const review = getNode('.enroll__list ul');
+
+// 	const target = e.target.closest('ul');
+// 	console.log(target);
+// 	const ulId = target.id;
+// 	console.log(ulId);
+
+// 	if (!target) return;
+
+// const id = attr(target, 'data-index').slice(-1);
+// console.log(id);
+
+// userDataReview.delete(url);
+// }
+// list.addEventListener('click', deleteList);
+
+function deletePlusReview() {}
+
+const deleteAll = getNode('.deleteAll');
+deleteAll.addEventListener('click', deletePlusReview);
