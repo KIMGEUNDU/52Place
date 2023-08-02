@@ -17,8 +17,8 @@
 		<title>오이플레이스</title>
 	</head>
 
-	<body class="bg-slate-100">
-		<header class="top-0 mx-auto h-10 w-full max-w-xs bg-white">
+	<body>
+		<header class="fixed left-1/2 top-0 z-10 h-10 w-full max-w-xs -translate-x-1/2 bg-white">
 			<span class="headerTime">3:28</span>
 			<img class="headerPosition" src="../assets/icons/position.png" alt="위치 아이콘" />
 			<img class="headerVector" src="../assets/icons/vector.png" alt="네트워크 신호" />
@@ -116,12 +116,10 @@
 			</section>
 
 			<!-- 추가 버튼 -->
-			<section>
-				<div class="fixed bottom-10 right-2">
-					<a href="reviewChoice.html">
-						<img src="./../assets/icons/plus.png" alt="icon-lg-plus" />
-					</a>
-				</div>
+			<section class="sticky bottom-16 z-20">
+				<button class="ml-64" onclick="location.href ='./reviewChoice.html'">
+					<img src="/assets/icons/plus.png" alt="icon-lg-plus" />
+				</button>
 			</section>
 		</main>
 

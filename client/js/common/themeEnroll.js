@@ -44,7 +44,7 @@ const scrollArrowImage = document.getElementById('scrollArrowImage');
 
 // 이미지 링크를 여기에 추가
 const defaultImageSrc = '/assets/icons/arrowwhite.png';
-const scrolledImageSrc = '/assets/icons/arrowblack.png';
+const scrolledImageSrc = '/assets/icons/leftblack.png';
 
 window.addEventListener('scroll', () => {
 	if (window.scrollY > 0) {
