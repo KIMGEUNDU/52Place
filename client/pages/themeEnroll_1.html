@@ -29,23 +29,25 @@
 	</head>
 
 	<body>
-		<header class="m-auto h-10 max-w-xs bg-white">
-			<span class="headerTime">1:21</span>
-			<img class="headerPosition" src="../assets/icons/position.png" alt="위치 아이콘" />
-			<img class="headerVector" src="../assets/icons/vector.png" alt="네트워크 신호" />
-			<span class="headerLte">LTE</span>
-			<img class="headerBattery" src="../assets/icons/battery.png" alt="배터리 함량" />
+		<header class="relative z-20 m-auto h-10 max-w-xs bg-white">
+			<div>
+				<span class="headerTime">3:28</span>
+				<img class="headerPosition" src="/assets/images/icons/position.png" alt="위치 아이콘" />
+				<img class="headerVector" src="/assets/images/icons/vector.png" alt="네트워크 신호" />
+				<span class="headerLte">LTE</span>
+				<img class="headerBattery" src="/assets/images/icons/battery.png" alt="배터리 함량" />
+			</div>
 		</header>
 
 		<main class="bg-light2 relative m-auto max-w-xs">
 			<h1 class="hidden">themeEnroll</h1>
 
-			<section class="h-[348px] bg-gray7 bg-[url('/assets/images/reviewcake.png')] bg-cover pb-8">
+			<section class="h-[348px] bg-gray7 bg-[url('/assets/images/reviewcake.png')] bg-cover">
 				<!-- 헤딩 -->
 				<section class="menuEnroll">
-					<a href="http://localhost:5500/pages/themePage.html">
-						<img id="scrollArrowImage" src="/assets/icons/arrowwhite.png" alt="뒤로가기" />
-					</a>
+					<a href="http://localhost:5500/pages/themePage.html"
+						><img src="/assets/icons/leftwhite.png" alt="뒤로가기"
+					/></a>
 					<button type="submit" class="activeThemeEnterButton">등록</button>
 				</section>
 
@@ -54,7 +56,7 @@
 						<li class="pb-3 text-neutral-50">
 							<h2 class="mb-2 text-2xl font-semibold">연남/합정 데이트</h2>
 							<div class="border border-zinc-400 opacity-25"></div>
-							<p class="text-right text-xs font-light text-neutral-400 opacity-0">
+							<p class="text-right text-xs font-light text-neutral-400">
 								<strong class="text-neutral-50">9</strong>/20
 							</p>
 						</li>
@@ -62,7 +64,7 @@
 							<p class="mb-2 text-sm">데이트 코스 모음</p>
 							<div class="border border-zinc-400 opacity-25"></div>
 							<sapn>
-								<p class="text-right text-xs font-light text-neutral-400 opacity-0">
+								<p class="text-right text-xs font-light text-neutral-400">
 									<strong class="text-neutral-50">9</strong>/100
 								</p>
 							</sapn>
@@ -70,7 +72,7 @@
 					</ul>
 				</div>
 				<div>
-					<button type="submit" onclick="location.href='map.html'" class="coverButtonMap">
+					<button type="submit" class="coverButtonMap">
 						<span class="ml-1 flex font-semibold">지도</span>
 					</button>
 				</div>
@@ -128,42 +130,54 @@
 					<img src="/assets/icons/plus.png" alt="icon-lg-plus" />
 				</button>
 			</section>
-		</main>
 
-		<nav class="fixed bottom-0 left-1/2 z-10 w-full max-w-xs -translate-x-1/2 bg-white">
-			<ul class="navList">
-				<li class="nav__item navWidth">
-					<a href="map.html"
-						><img src="../assets/icons/map.png" class="navImg" alt="지도보기" />지도</a
-					>
-				</li>
-				<li class="nav__item navWidth">
-					<a href="#"><img src="../assets/icons/save.png" class="navImg" alt="북마크보기" />저장</a>
-				</li>
-				<li class="nav__item navWidth">
-					<a href="#"
-						><img
-							src="../assets/icons/subway.png"
-							class="navImg"
-							alt="대중교통 정보보기"
-						/>대중교통</a
-					>
-				</li>
-				<li class="nav__item navWidth">
-					<a href="#"
-						><img
-							src="../assets/icons/car.png"
-							class="navImg"
-							alt="내비게이션 정보 보기"
-						/>내비게이션</a
-					>
-				</li>
-				<li class="nav__item selectNavImg">
-					<a href="./themePage.html"
-						><img src="../assets/icons/my.png" class="navImg" alt="마이 페이지로 이동" />MY</a
-					>
-				</li>
-			</ul>
-		</nav>
+			<aside class="fixed bottom-0 z-20 bg-white px-4">
+				<nav class="fixed bottom-0 left-1/2 z-10 w-full max-w-xs -translate-x-1/2 bg-white">
+					<ul class="navList">
+						<li class="nav__item selectNavImg">
+							<a href="map.html"
+								><img src="../assets/images/icons/map.png" class="navImg" alt="지도보기" />지도</a
+							>
+						</li>
+						<li class="nav__item navWidth">
+							<a href="#"
+								><img
+									src="../assets/images/icons/save.png"
+									class="navImg"
+									alt="북마크보기"
+								/>저장</a
+							>
+						</li>
+						<li class="nav__item navWidth">
+							<a href="#"
+								><img
+									src="../assets/images/icons/subway.png"
+									class="navImg"
+									alt="대중교통 정보보기"
+								/>대중교통</a
+							>
+						</li>
+						<li class="nav__item navWidth">
+							<a href="#"
+								><img
+									src="../assets/images/icons/car.png"
+									class="navImg"
+									alt="내비게이션 정보 보기"
+								/>내비게이션</a
+							>
+						</li>
+						<li class="nav__item navWidth">
+							<a href="./themePage.html"
+								><img
+									src="../assets/images/icons/my.png"
+									class="navImg"
+									alt="마이 페이지로 이동"
+								/>MY</a
+							>
+						</li>
+					</ul>
+				</nav>
+			</aside>
+		</main>
 	</body>
 </html>
