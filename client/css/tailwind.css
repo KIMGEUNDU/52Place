@@ -381,14 +381,6 @@ input[type='file'] {
 	@apply flex flex-row-reverse;
 }
 
-.selectNavImg {
-	@apply h-[57px] w-[66px] border-t-2 border-primary font-semibold text-primary;
-}
-
-.navWidth {
-	@apply h-[57px] w-[66px];
-}
-
 .callButton {
 	@apply absolute right-[10px] top-[10px];
 }
@@ -419,10 +411,6 @@ input[type='file'] {
 	@apply relative mx-auto mt-8 flex min-h-screen max-w-xs flex-col;
 }
 
-input[type='file'] {
-	display: none;
-}
-
 .headingBox {
 	@apply fixed left-1/2 top-10 flex w-full max-w-xs -translate-x-1/2 items-center justify-between bg-transparent p-2;
 }
@@ -439,70 +427,8 @@ input[type='file'] {
 	@apply bg-gray7 duration-150 ease-in;
 }
 
-.plusBox {
-	@apply -mt-[46px] rounded-t-xl bg-white px-[22px] pb-20 pt-[18px];
-}
-
-.formBox {
-	@apply flex h-[330px] flex-col px-4 pb-96 pt-16 text-white;
-}
-
-.navWidth {
-	@apply h-[57px] w-[66px];
-}
-
-.selectNavImg {
-	@apply h-[57px] w-[66px] border-t-2 border-primary font-semibold text-primary;
-}
-
-.callButton {
-	@apply absolute right-[10px] top-[10px];
-}
-
-.reviewContent {
-	@apply relative mb-3 flex h-[92px] cursor-pointer list-none;
-}
-
-.figureSize {
-	@apply h-[92px] w-[92px] rounded-l-2xl;
-}
-
-.reviewDetail {
-	@apply truncate;
-}
-
-.reviewTitle {
-	@apply font-semibold;
-}
-
-/* jin */
-
-.coverInputSub {
-	@apply mt-3 h-6 w-72 resize-none overflow-hidden border-b border-contentSecondary bg-transparent text-xs placeholder:text-xs placeholder:text-contentTeriary focus:outline-none;
-}
-
-.inputForm {
-	@apply relative mx-auto mt-8 flex min-h-screen max-w-xs flex-col;
-}
-
-input[type='file'] {
-	display: none;
-}
-
-.headingBox {
-	@apply fixed left-1/2 top-10 flex w-full max-w-xs -translate-x-1/2 items-center justify-between bg-transparent p-2;
-}
-
-.coverImg {
-	@apply absolute -z-[1] h-[400px] w-full object-cover text-center;
-}
-
-.coverBg {
-	@apply bg-gray7;
-}
-
-.scrollheading {
-	@apply bg-gray7 duration-150 ease-in;
+.scrollheadingWhite {
+	@apply z-20 bg-white text-gray7 duration-150 ease-in;
 }
 
 .plusBox {
@@ -513,157 +439,6 @@ input[type='file'] {
 	@apply flex h-[330px] flex-col px-4 pb-96 pt-16 text-white;
 }
 
-.navWidth {
-	@apply h-[57px] w-[66px];
-}
-
-.selectNavImg {
-	@apply h-[57px] w-[66px] border-t-2 border-primary font-semibold text-primary;
-}
-.heartButton1 {
-	@apply absolute bottom-9 right-6 h-[30px] w-[30px] items-center bg-heartFalse bg-[center] bg-no-repeat;
-}
-
-.heartButton2 {
-	@apply absolute bottom-9 right-6 h-[30px] w-[30px] items-center bg-heartTrue bg-[center] bg-no-repeat;
-}
-
-.menuEnroll {
-	@apply sticky top-0 z-10 flex items-center justify-between px-4 pb-4 pt-4;
-}
-
-.menuEnrollActive {
-	@apply sticky top-0 z-10 flex items-center justify-between bg-white px-4 pb-4 pt-4;
-}
-
-.navWidth {
-	@apply h-[57px] w-[66px];
-}
-
-.selectNavImg {
-	@apply h-[57px] w-[66px] border-t-2 border-primary font-semibold text-primary;
-}
-
-.enroll__list {
-	@apply relative px-2 pb-4 drop-shadow-sm;
-}
-
-.Enroll__number {
-	@apply mb-2 flex flex-row;
-}
-
-.enroll__number {
-	@apply ml-1 mt-2 text-xs font-medium text-[#70AF76];
-}
-
-.Enroll__img {
-	@apply h-[232px] overflow-hidden;
-}
-
-.enroll__img {
-	@apply w-full rounded-t-lg;
-}
-
-.enroll__time {
-	@apply bg-white px-8 py-4 text-center text-xs;
-}
-
-.enroll__time__p {
-	@apply mb-1.5 mt-2 font-medium text-light3;
-}
-
-.enroll__time__tag {
-	@apply m-0.5 rounded-md border border-light3 p-0.5 text-xs font-medium text-light3;
-}
-
-.enroll__tag {
-	@apply my-2 flex flex-row justify-center gap-1 text-xs text-slate-500;
-}
-
-.enroll__tag__p {
-	@apply flex rounded-md bg-slate-50 px-1.5 py-0.5;
-}
-
-.enroll__tag__p__img {
-	@apply mb-1 mr-1 inline-block;
-}
-
-.Enroll__title {
-	@apply border-t-2 border-dotted border-slate-300 bg-white px-4 py-3;
-}
-
-.enroll__zig {
-	@apply -mt-1 flex items-center;
-}
-
-.enroll__zag {
-	@apply flex flex-row-reverse;
-}
-
-.selectNavImg {
-	@apply h-[57px] w-[66px] border-t-2 border-primary font-semibold text-primary;
-}
-
-.navWidth {
-	@apply h-[57px] w-[66px];
-}
-
-.newListSize {
-	@apply mb-3 flex justify-between rounded-xl bg-white px-4 py-6 shadow-thumnail;
-}
-
-.photoAdd {
-	@apply w-[140px] rounded-lg border border-black bg-photoTrue bg-[center_left_0.4rem] bg-no-repeat py-3 pl-7 pr-3 text-xs font-semibold;
-}
-
-.likeBtn {
-	@apply mb-2 h-10 rounded-lg bg-white px-5 text-xs font-semibold text-contentTeriary shadow-bottom;
-}
-
-.likeBtnClicked {
-	@apply mb-2 h-10 rounded-lg bg-primary px-5 text-xs font-semibold text-white shadow-bottom;
-}
-
-.choiceBtnBox {
-	@apply flex w-[200px] flex-col items-center justify-center;
-}
-
-.choiceBtn {
-	@apply mb-2 h-10 rounded-lg bg-white px-5 text-xs font-semibold text-contentTeriary shadow-bottom;
-}
-
-.choiceBtnClicked {
-	@apply mb-2 h-10 rounded-lg bg-primary px-5 text-xs font-semibold text-white shadow-bottom;
-}
-
-.reviewTextArea {
-	@apply h-[110px] w-full overflow-y-hidden rounded-lg bg-grayBg px-3 py-2 focus:outline-none;
-}
-
-.inputLength {
-	@apply absolute bottom-3 right-5 text-right text-xs text-contentTeriary;
-}
-
-.newReviewSubmit {
-	@apply mb-2 h-10 rounded-lg bg-primary px-6 text-xs text-white;
-}
-
-.a11yHidden {
-	@apply absolute -m-1 hidden h-1 w-1 overflow-hidden whitespace-nowrap border-0 p-0;
-}
-
-.uploadImgBox {
-	@apply mt-1 flex w-full items-center justify-center gap-4 overflow-hidden px-4 pt-6;
-}
-
-.uploadImg {
-	@apply h-[80px] w-[80px] rounded-md;
-}
-
-.mapHeartFalse {
-	@apply h-[18px] w-[18px] bg-mapHeartFalse bg-[left_top_0.1rem] bg-no-repeat;
-}
-
-.mapHeartTrue {
-	@apply h-[18px] w-[18px] bg-mapHeartTrue bg-[left_top_0.1rem] bg-no-repeat;
+.coverBox {
+	@apply flex h-[330px] flex-col px-4 pb-72 pt-16 text-white;
 }
