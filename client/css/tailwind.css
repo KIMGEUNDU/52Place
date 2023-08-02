@@ -282,7 +282,7 @@ input[type='file'] {
 }
 
 .coverButtonMap {
-	@apply ml-auto mr-4 flex rounded-full border bg-subwayWhite bg-[center_left_12px] bg-no-repeat px-3 py-2 pl-9 text-right text-sm text-white;
+	@apply ml-auto mr-4 flex rounded-full border bg-subway bg-[center_left_12px] bg-no-repeat px-3 py-2 pl-9 text-right text-sm text-white;
 }
 
 .themeEnterButton {
@@ -310,11 +310,11 @@ input[type='file'] {
 }
 
 .menuEnroll {
-	@apply sticky top-[40px] z-10 flex items-center justify-between px-4 pb-4 pt-4;
+	@apply sticky top-0 z-10 flex items-center justify-between px-4 pb-4 pt-4;
 }
 
 .menuEnrollActive {
-	@apply sticky top-[40px] z-10 flex items-center justify-between bg-white px-4 pb-4 pt-4;
+	@apply sticky top-0 z-10 flex items-center justify-between bg-white px-4 pb-4 pt-4;
 }
 
 .navWidth {
@@ -345,10 +345,6 @@ input[type='file'] {
 	@apply w-full rounded-t-lg;
 }
 
-.enroll__text {
-	@apply block h-[50px] w-[214px] overflow-hidden whitespace-normal;
-}
-
 .enroll__time {
 	@apply bg-white px-8 py-4 text-center text-xs;
 }
@@ -532,6 +528,14 @@ input[type='file'] {
 	@apply absolute bottom-9 right-6 h-[30px] w-[30px] items-center bg-heartTrue bg-[center] bg-no-repeat;
 }
 
+.menuEnroll {
+	@apply sticky top-0 z-10 flex items-center justify-between px-4 pb-4 pt-4;
+}
+
+.menuEnrollActive {
+	@apply sticky top-0 z-10 flex items-center justify-between bg-white px-4 pb-4 pt-4;
+}
+
 .navWidth {
 	@apply h-[57px] w-[66px];
 }
@@ -541,7 +545,7 @@ input[type='file'] {
 }
 
 .enroll__list {
-	@apply relative pb-4 drop-shadow-sm;
+	@apply relative px-2 pb-4 drop-shadow-sm;
 }
 
 .Enroll__number {
@@ -604,6 +608,63 @@ input[type='file'] {
 	@apply h-[57px] w-[66px];
 }
 
-.reviewAll__count {
-	@apply ml-1 text-info;
+/* jay 추가 */
+.newListSize {
+	@apply mb-3 flex justify-between rounded-xl bg-white px-4 py-6 shadow-thumnail;
+}
+
+.photoAdd {
+	@apply w-[140px] rounded-lg border border-black bg-photoTrue bg-[center_left_0.4rem] bg-no-repeat py-3 pl-7 pr-3 text-xs font-semibold;
+}
+
+.likeBtn {
+	@apply mb-2 h-10 rounded-lg bg-white px-5 text-xs font-semibold text-contentTeriary shadow-bottom;
+}
+
+.likeBtnClicked {
+	@apply mb-2 h-10 rounded-lg bg-primary px-5 text-xs font-semibold text-white shadow-bottom;
+}
+
+.choiceBtnBox {
+	@apply flex w-[200px] flex-col items-center justify-center;
+}
+
+.choiceBtn {
+	@apply mb-2 h-10 rounded-lg bg-white px-5 text-xs font-semibold text-contentTeriary shadow-bottom;
+}
+
+.choiceBtnClicked {
+	@apply mb-2 h-10 rounded-lg bg-primary px-5 text-xs font-semibold text-white shadow-bottom;
+}
+
+.reviewTextArea {
+	@apply h-[110px] w-full overflow-y-hidden rounded-lg bg-grayBg px-3 py-2 focus:outline-none;
+}
+
+.inputLength {
+	@apply absolute bottom-3 right-5 text-right text-xs text-contentTeriary;
+}
+
+.newReviewSubmit {
+	@apply mb-2 h-10 rounded-lg bg-primary px-6 text-xs text-white;
+}
+
+.a11yHidden {
+	@apply absolute -m-1 hidden h-1 w-1 overflow-hidden whitespace-nowrap border-0 p-0;
+}
+
+.uploadImgBox {
+	@apply mt-1 flex w-full items-center justify-center gap-4 overflow-hidden px-4 pt-6;
+}
+
+.uploadImg {
+	@apply h-[80px] w-[80px] rounded-md;
+}
+
+.mapHeartFalse {
+	@apply h-[18px] w-[18px] bg-mapHeartFalse bg-[left_top_0.1rem] bg-no-repeat;
+}
+
+.mapHeartTrue {
+	@apply h-[18px] w-[18px] bg-mapHeartTrue bg-[left_top_0.1rem] bg-no-repeat;
 }
