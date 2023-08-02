@@ -51,7 +51,7 @@ input[type='file'] {
 }
 
 .coverButton {
-	@apply mx-auto mt-[98px] flex w-[136px] cursor-pointer rounded-full border bg-coverPhoto bg-[center_left_12px] bg-no-repeat px-3 py-2 pl-9 text-right;
+	@apply mx-auto mt-[98px] flex w-[136px] cursor-pointer rounded-full border bg-coverPhoto bg-[center_left_12px] bg-no-repeat px-3 py-2 pl-9 text-right text-white;
 }
 
 .plusReview {
@@ -277,12 +277,12 @@ input[type='file'] {
 	@apply h-[46px] w-[272px] border-b border-contentSecondary bg-transparent focus:outline-none;
 }
 
-.coverButton {
+.coverButtonEnroll {
 	@apply mx-auto mt-[89px] flex rounded-full border bg-coverPhoto bg-[center_left_12px] bg-no-repeat px-3 py-2 pl-9 text-right;
 }
 
 .coverButtonMap {
-	@apply ml-auto mr-4 flex rounded-full border bg-subway bg-[center_left_12px] bg-no-repeat px-3 py-2 pl-9 text-right text-sm text-white;
+	@apply ml-auto mr-4 flex rounded-full border bg-subwaywhite bg-[center_left_12px] bg-no-repeat px-3 py-2 pl-9 text-right text-sm text-white;
 }
 
 .themeEnterButton {
@@ -505,4 +505,8 @@ input[type='file'] {
 
 .writeAbleEmpty {
 	@apply mb-2 text-center text-xl font-semibold;
+}
+
+.coverBox {
+	@apply mt-10 flex h-[330px] flex-col px-4 pb-72 pt-16 text-white;
 }
