@@ -17,6 +17,15 @@ ul.addEventListener('click', (e) => {
 	}
 });
 
+//header 시간 바꾸기
+const headerTime = getNode('.headerTime');
+headerTime.textContent = new Date().toLocaleTimeString('ko-KR').slice(3, -3);
+
+setInterval(() => {
+	let time = new Date().toLocaleTimeString('ko-KR');
+	headerTime.textContent = time.slice(3, -3);
+}, 60000);
+
 // reviewList 링크 연결 전 기본 동작 막기
 const list = getNodes('.enroll__list');
 
@@ -35,7 +44,7 @@ const scrollArrowImage = document.getElementById('scrollArrowImage');
 
 // 이미지 링크를 여기에 추가
 const defaultImageSrc = '/assets/icons/arrowwhite.png';
-const scrolledImageSrc = '/assets/icons/arrowblack.png';
+const scrolledImageSrc = '/assets/icons/leftblack.png';
 
 window.addEventListener('scroll', () => {
 	if (window.scrollY > 0) {
@@ -69,12 +78,3 @@ function deleteAllUlElements() {
 
 const deleteButton = document.getElementById('deleteButton');
 deleteButton.addEventListener('click', deleteAllUlElements);
-
-//header 시간 바꾸기
-const headerTime = getNode('.headerTime');
-headerTime.textContent = new Date().toLocaleTimeString('ko-KR').slice(3, -3);
-
-setInterval(() => {
-	let time = new Date().toLocaleTimeString('ko-KR');
-	headerTime.textContent = time.slice(3, -3);
-}, 60000);
