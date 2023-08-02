@@ -147,6 +147,8 @@ function beatphobiaImg() {
 		name: '비트포비아',
 		place: '서울시 마포구',
 		image: { src: 'andimete.png', alt: '비트포비아' },
+		detail: '믿고하는 비포 테마! 발전하는게 느껴져요',
+		date: '1.24.일',
 	};
 }
 

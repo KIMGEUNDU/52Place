@@ -23,50 +23,52 @@
 	<body class="">
 		<main class="m-auto max-w-xs">
 			<div class="flex flex-col items-center">
-			<h1 class="logoImg">
-				<img src="../assets/icons/logo.png" class="" alt="오이플레이스" />
-			</h1>
-			<div class="h-[41px] w-[251px]">
-				<h2 class="loginTitle">로그인</h2>
+				<h1 class="logoImg">
+					<img src="../assets/icons/logo.png" class="" alt="오이플레이스" />
+				</h1>
+				<div class="h-[41px] w-[251px]">
+					<h2 class="loginTitle">로그인</h2>
+				</div>
+				<form action="#" class="login__form mt-6" method="post">
+					<fieldset class="fieldset">
+						<legend class="hidden">로그인 폼</legend>
+						<div class="login__id mb-3">
+							<label for="userId" class="hidden">아이디</label>
+							<input
+								class="inputBox"
+								type="text"
+								id="userId"
+								name="userId"
+								required
+								placeholder="아이디를 입력해주세요"
+								autocomplete="off"
+							/>
+							<p class="idError">아이디는 숫자 포함, 영문 3자 이상 작성해주세요.</p>
+						</div>
+						<div class="login__pwd mb-3">
+							<label for="userPassword" class="hidden">비밀번호</label>
+							<input
+								class="inputBox"
+								type="password"
+								id="userPassword"
+								name="userPassword"
+								required
+								placeholder="비밀번호를 입력해주세요"
+								autocomplete="off"
+							/>
+							<p class="pwdError">특수문자 포함 8자리 이상 입력해 주세요.</p>
+							<p class="membersError">아이디 혹은 비밀번호가 일치하지 않습니다.</p>
+						</div>
+						<div class="searchBox">
+							<span class="search__id"><a href="#">아이디 찾기</a></span>
+							<span class="search__divider" aria-hidden="true">ㅣ</span>
+							<span class="search__pwd"><a href="#">비밀번호 찾기</a></span>
+						</div>
+						<button type="submit" class="loginBtnOff loginBtn">로그인</button>
+					</fieldset>
+				</form>
+				<button onclick="location.href='join.html'" class="joinBtn">회원가입</button>
 			</div>
-			<form action="#" class="login__form mt-6" method="post">
-				<fieldset class="fieldset">
-					<legend class="hidden">로그인 폼</legend>
-					<div class="login__id mb-3">
-						<label for="userId" class="hidden">아이디</label>
-						<input
-							class="inputBox"
-							type="text"
-							id="userId"
-							name="userId"
-							required
-							placeholder="아이디를 입력해주세요"
-						/>
-						<p class="idError">아이디는 숫자 포함, 영문 3자 이상 작성해주세요.</p>
-					</div>
-					<div class="login__pwd mb-3">
-						<label for="userPassword" class="hidden">비밀번호</label>
-						<input
-							class="inputBox"
-							type="password"
-							id="userPassword"
-							name="userPassword"
-							required
-							placeholder="비밀번호를 입력해주세요"
-						/>
-						<p class="pwdError">특수문자 포함 8자리 이상 입력해 주세요.</p>
-						<p class="membersError">아이디 혹은 비밀번호가 일치하지 않습니다.</p>
-					</div>
-					<div class="searchBox">
-						<span class="search__id"><a href="#">아이디 찾기</a></span>
-						<span class="search__divider" aria-hidden="true">ㅣ</span>
-						<span class="search__pwd"><a href="#">비밀번호 찾기</a></span>
-					</div>
-					<button type="submit" class="loginBtnOff loginBtn">로그인</button>
-				</fieldset>
-			</form>
-			<button onclick="location.href='join.html'" class="joinBtn">회원가입</button>
-		</div>
 		</main>
 	</body>
 </html>

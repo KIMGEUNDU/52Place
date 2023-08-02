@@ -145,7 +145,8 @@ function keyEscapeImg() {
 		name: '키이스케이프',
 		place: '서울시 강남구',
 		image: { src: 'keyEscape.jpg', alt: '키이스케이프' },
-		state: 'true',
+		detail: '전테마가 꽃밭길이에요 정말 추천합니다 : )',
+		date: '5.28.토',
 	};
 }
 
