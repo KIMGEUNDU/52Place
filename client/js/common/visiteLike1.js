@@ -156,14 +156,11 @@ async function handleNewReviewAdd(e) {
 	e.preventDefault();
 	try {
 		if (reviewText.value.length >= 30) {
-			const response = await userDataReview.post(URL, keyEscapeImg());
-			if (!response.ok) {
-				alert('리뷰 작성에 실패했습니다. 다시 시도해주세요');
-				location.href = 'themePage.html';
-			} else {
+			await userDataReview.post(URL, keyEscapeImg()).then(() => {
 				alert('리뷰를 저장하였습니다.');
 				location.href = 'themePage.html';
-			}
+				userDataReview.delete('http://localhost:3000/newReview/1');
+			});
 		} else {
 			e.preventDefault();
 			alert('리뷰를 30자 이상 작성해주세요');

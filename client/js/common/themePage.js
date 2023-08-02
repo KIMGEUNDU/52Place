@@ -70,15 +70,25 @@ setInterval(() => {
 	headerTime.textContent = time.slice(3, -3);
 }, 60000);
 
-//조회수 카운트하기
+// 조회수 카운트하기
 const reviewImage1 = getNode('.reviewImage1');
 const viewCount = getNode('.view__count');
 let viewCountUp = parseInt(localStorage.getItem('조회수'));
-viewCount.textContent = localStorage.getItem('조회수');
+
+if (localStorage.getItem('조회수') === null) {
+	viewCount.textContent = 0;
+} else {
+	viewCount.textContent = localStorage.getItem('조회수');
+}
 
 function setViewsCount() {
-	viewCountUp += 1;
-	localStorage.setItem('조회수', viewCountUp);
+	if (localStorage.getItem('조회수') === null) {
+		localStorage.setItem('조회수', 1);
+		viewCountUp = 1;
+	} else {
+		viewCountUp += 1;
+		localStorage.setItem('조회수', viewCountUp);
+	}
 }
 
 reviewImage1.addEventListener('click', setViewsCount);
@@ -93,13 +103,3 @@ reviewImage1.addEventListener('click', setViewsCount);
 // 	}
 // 	item.addEventListener('click', handleRemoveList);
 // });
-
-//Review.json 데이터 중복 확인
-const sameResponse = await userDataReview.get('http://localhost:3000/newReview');
-const sameData = sameResponse.data;
-
-reviewData.forEach((item) => {
-	if (item.id === '12') {
-		console.log('이미 있습니다.');
-	}
-});

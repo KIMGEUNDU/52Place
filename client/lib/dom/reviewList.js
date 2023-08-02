@@ -95,7 +95,7 @@ export function renderReviewList(target, data) {
 
 export function createPlusReview({ id, where, location, preview, sub, when }) {
 	let template = /* html */ `
-  <ul class="enroll__list">
+  <ul class="enroll__list" data-index= review-${id}>
   <li class="Enroll__number">
     <img src="/assets/icons/paper.png" alt="icon-paper" />
     <p class="enroll__number">NO.${id}</p>
@@ -199,4 +199,15 @@ export function saveRiview({
 
 export function renderSaveReview(target, data) {
 	insertLast(target, saveRiview(data));
+}
+
+export function createReviewCount(count) {
+	let template = /* html */ `
+  <span class="ml-1 text-info">${count}</span>
+  `;
+	return template;
+}
+
+export function renderCountReview(target, data) {
+	insertLast(target, createReviewCount(data));
 }

@@ -594,6 +594,10 @@ video {
   right: 0.5rem;
 }
 
+.right-28 {
+  right: 7rem;
+}
+
 .right-5 {
   right: 1.25rem;
 }
@@ -856,6 +860,10 @@ video {
   width: 1.5rem;
 }
 
+.w-8 {
+  width: 2rem;
+}
+
 .w-\[155px\] {
   width: 155px;
 }
@@ -1078,6 +1086,10 @@ video {
 
 .bg-mapBefore {
   background-image: url(/assets/icons/mapbefore.png);
+}
+
+.bg-spreadMap {
+  background-image: url(/assets/icons/spread.png);
 }
 
 .bg-contain {
@@ -2787,8 +2799,6 @@ input[type='file'] {
 
 .enroll__list {
   position: relative;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
   padding-bottom: 1rem;
   --tw-drop-shadow: drop-shadow(0 0.8px 0.6px rgba(0, 0, 0, 0.14));
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -3129,6 +3139,19 @@ input[type='file'] {
   background-image: url(/assets/icons/mapheart==true.png);
   background-position: left top 0.1rem;
   background-repeat: no-repeat;
+}
+
+.writeAble {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.writeAbleEmpty {
+  margin-bottom: 0.5rem;
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
 }
 
 .placeholder\:text-2xl::-moz-placeholder {

@@ -115,29 +115,6 @@ function handleHeading() {
 
 window.addEventListener('scroll', handleHeading);
 
-// 스크롤 시 리뷰 박스 올리기
-// const reviewBox = getNode('.plus__container');
-// const main = getNode('.cover__container');
-// const mainHeight = main.getBoundingClientRect().height;
-// const windowHeight = window.innerHeight;
-// reviewBox.style.height = `${windowHeight}-${headerHeight}-${mainHeight}px`;
-
-// reviewBox.style.transform = `translate(0, -${scrollY / 2}px)`;
-
-// // 높이 자동으로 늘리기
-// const finalHeight = 294 + scrollY * 1.5;
-
-// reviewBox.style.height = `${finalHeight}px`;
-// mainHeight.style.height = `${windowHeight}px`;
-// if (finalHeight >= 480) {
-// 	reviewBox.style.height = '480px';
-// 	mainHeight.style.maxHeight = '640px';
-// 	// reviewBox.style.overflow = 'hidden';
-// } else {
-// 	reviewBox.style.height = 'auto';
-// 	mainHeight.style.height = `${windowHeight}px`;
-// }
-
 /* -------------------------------------------------------------------------- */
 // 등록 버튼 활성화
 const enrollBtn = getNode('.enrollBtn');
@@ -189,3 +166,13 @@ async function postTheme(e) {
 }
 
 enrollBtn.addEventListener('click', postTheme);
+
+/* -------------------------------------------------------------------------- */
+//header 시간 바꾸기
+const headerTime = getNode('.headerTime');
+headerTime.textContent = new Date().toLocaleTimeString('ko-KR').slice(3, -3);
+
+setInterval(() => {
+	let time = new Date().toLocaleTimeString('ko-KR');
+	headerTime.textContent = time.slice(3, -3);
+}, 60000);
