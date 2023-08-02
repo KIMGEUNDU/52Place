@@ -594,6 +594,10 @@ video {
   right: 0.5rem;
 }
 
+.right-28 {
+  right: 7rem;
+}
+
 .right-5 {
   right: 1.25rem;
 }
@@ -622,72 +626,16 @@ video {
   top: 10px;
 }
 
-.bottom-2 {
-  bottom: 0.5rem;
-}
-
-.top-1 {
-  top: 0.25rem;
-}
-
-.top-16 {
-  top: 4rem;
-}
-
-.top-\[\] {
-  top: ;
-}
-
-.top-\[100px\] {
-  top: 100px;
-}
-
-.top-\[300px\] {
-  top: 300px;
-}
-
-.bottom-\[300px\] {
-  bottom: 300px;
-}
-
-.bottom-\[500px\] {
-  bottom: 500px;
-}
-
-.bottom-\[400px\] {
-  bottom: 400px;
-}
-
-.bottom-\[350px\] {
-  bottom: 350px;
-}
-
-.bottom-\[340px\] {
-  bottom: 340px;
-}
-
-.right-20 {
-  right: 5rem;
-}
-
-.right-4 {
-  right: 1rem;
-}
-
-.right-24 {
-  right: 6rem;
-}
-
-.right-28 {
-  right: 7rem;
-}
-
 .z-10 {
   z-index: 10;
 }
 
 .z-20 {
   z-index: 20;
+}
+
+.float-right {
+  float: right;
 }
 
 .m-4 {
@@ -752,12 +700,20 @@ video {
   margin-left: 0.5rem;
 }
 
+.ml-4 {
+  margin-left: 1rem;
+}
+
 .ml-64 {
   margin-left: 16rem;
 }
 
 .mr-2 {
   margin-right: 0.5rem;
+}
+
+.mr-4 {
+  margin-right: 1rem;
 }
 
 .mt-10 {
@@ -904,6 +860,10 @@ video {
   width: 1.5rem;
 }
 
+.w-8 {
+  width: 2rem;
+}
+
 .w-\[155px\] {
   width: 155px;
 }
@@ -942,14 +902,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-10 {
-  width: 2.5rem;
-}
-
-.w-8 {
-  width: 2rem;
 }
 
 .max-w-xs {
@@ -1140,10 +1092,6 @@ video {
   background-image: url(/assets/icons/spread.png);
 }
 
-.to-\[300px\] {
-  --tw-gradient-to-position: 300px;
-}
-
 .bg-contain {
   background-size: contain;
 }
@@ -1249,10 +1197,6 @@ video {
 
 .pr-2 {
   padding-right: 0.5rem;
-}
-
-.pt-1 {
-  padding-top: 0.25rem;
 }
 
 .pt-2 {
@@ -2851,8 +2795,6 @@ input[type='file'] {
 
 .enroll__list {
   position: relative;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
   padding-bottom: 1rem;
   --tw-drop-shadow: drop-shadow(0 0.8px 0.6px rgba(0, 0, 0, 0.14));
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -3193,6 +3135,19 @@ input[type='file'] {
   background-image: url(/assets/icons/mapheart==true.png);
   background-position: left top 0.1rem;
   background-repeat: no-repeat;
+}
+
+.writeAble {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.writeAbleEmpty {
+  margin-bottom: 0.5rem;
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
 }
 
 .placeholder\:text-2xl::-moz-placeholder {
