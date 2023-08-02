@@ -13,23 +13,24 @@
 		/>
 		<link rel="stylesheet" href="./../css/main.css" />
 		<script src="../js/common/themeEnroll_new.js" type="module"></script>
+		<script src="../js/common/plusReview.js" type="module"></script>
 		<title>오이플레이스</title>
 	</head>
 
 	<body class="bg-slate-100">
-		<header class="fixed left-1/2 top-0 z-10 h-8 w-full max-w-xs -translate-x-1/2 bg-white">
+		<header class="top-0 mx-auto h-10 w-full max-w-xs bg-white">
 			<span class="headerTime">3:28</span>
-			<img class="headerPosition" src="../assets/images/icons/position.png" alt="위치 아이콘" />
-			<img class="headerVector" src="../assets/images/icons/vector.png" alt="네트워크 신호" />
+			<img class="headerPosition" src="../assets/icons/position.png" alt="위치 아이콘" />
+			<img class="headerVector" src="../assets/icons/vector.png" alt="네트워크 신호" />
 			<span class="headerLte">LTE</span>
-			<img class="headerBattery" src="../assets/images/icons/battery.png" alt="배터리 함량" />
+			<img class="headerBattery" src="../assets/icons/battery.png" alt="배터리 함량" />
 		</header>
 
-		<main class="relative m-auto mb-10 mt-8 max-w-xs flex-wrap bg-white">
+		<main class="relative m-auto mb-10 mt-0 max-w-xs flex-wrap bg-white">
 			<h1 class="hidden">themeEnroll</h1>
 
-			<div class="form__container bg-gray7">
-				<form action="#" class="coverForm formBox">
+			<div class="form__container bg-[url('/assets/images/reviewcake.png')] bg-cover">
+				<form action="#" class="coverForm coverBox">
 					<fieldset>
 						<legend class="sr-only">리뷰 작성 폼</legend>
 						<div class="text-center">
@@ -80,30 +81,41 @@
 
 					<!-- 뒤로가기, 등록 -->
 					<div class="heading headingBox">
-						<a href="themePage.html"><img src="../assets/icons/leftwhite.png" alt="뒤로가기" /></a>
-						<button type="submit" class="enrollBtn enterButton">등록</button>
+						<a href="themePage.html"
+							><img src="../assets/icons/leftwhite.png" alt="뒤로가기" class="backBtn"
+						/></a>
+						<button
+							type="submit"
+							class="enrollBtn enterButton"
+							onclick="location.href ='./themeEnroll_1.html'"
+						>
+							등록
+						</button>
 					</div>
 				</form>
 			</div>
 
-			<section class="relative mx-4 pb-20 pt-4 drop-shadow-xl">
-				<div class="mb-3 flex justify-between">
+			<!-- 리뷰 리스트 -->
+			<section>
+				<div class="m-4 flex justify-between">
 					<div class="flex font-semibold">
-						<h2 class="">리뷰</h2>
-						<span class="ml-1 text-info">2</span>
+						<h2 class="review__count">리뷰</h2>
+						<!-- <span class="ml-1 text-info">2</span> -->
 						<span class="text-contentTeriary">/10</span>
 					</div>
 					<ul class="flex items-center">
 						<li class="flex flex-row gap-1 text-xs text-contentSecondary">
 							<button>임시저장 |</button>
 							<button>순서변경 |</button>
-							<button>전체삭제</button>
+							<button class="deleteAll">전체삭제</button>
 						</li>
 					</ul>
 				</div>
+
 				<ul class="enroll__list review__plus"></ul>
 			</section>
 
+			<!-- 추가 버튼 -->
 			<section>
 				<div class="fixed bottom-10 right-2">
 					<a href="reviewChoice.html">
@@ -113,22 +125,23 @@
 			</section>
 		</main>
 
+		<!-- 네비게이션 -->
 		<nav class="fixed bottom-0 left-1/2 z-10 w-full max-w-xs -translate-x-1/2 bg-white">
 			<ul class="navList">
 				<li class="nav__item navWidth">
 					<a href="./map.html"
-						><img src="../assets/images/icons/map.png" class="navImg" alt="지도보기" />지도</a
+						><img src="../assets/icons/map.png" class="navImg" alt="지도보기" />지도</a
 					>
 				</li>
 				<li class="nav__item navWidth">
 					<a href="./"
-						><img src="../assets/images/icons/save.png" class="navImg" alt="북마크보기" />저장</a
+						><img src="../assets/icons/save.png" class="navImg" alt="북마크보기" />저장</a
 					>
 				</li>
 				<li class="nav__item navWidth">
 					<a href="./"
 						><img
-							src="../assets/images/icons/subway.png"
+							src="../assets/icons/subway.png"
 							class="navImg"
 							alt="대중교통 정보보기"
 						/>대중교통</a
@@ -137,7 +150,7 @@
 				<li class="nav__item navWidth">
 					<a href="./"
 						><img
-							src="../assets/images/icons/car.png"
+							src="../assets/icons/car.png"
 							class="navImg"
 							alt="내비게이션 정보 보기"
 						/>내비게이션</a
@@ -145,11 +158,7 @@
 				</li>
 				<li class="nav__item selectNavImg">
 					<a href="./themePage.html"
-						><img
-							src="../assets/images/icons/my.png"
-							class="navImg"
-							alt="마이 페이지로 이동"
-						/>MY</a
+						><img src="../assets/icons/my.png" class="navImg" alt="마이 페이지로 이동" />MY</a
 					>
 				</li>
 			</ul>

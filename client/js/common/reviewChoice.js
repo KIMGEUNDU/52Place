@@ -10,8 +10,6 @@ reviewData.forEach((item) => {
 
 /* -------------------------------------------------------------------------- */
 // 리뷰 추가하기
-// const ul = getNode('review__contents');
-
 async function createTheme(e) {
 	e.preventDefault();
 
@@ -22,6 +20,7 @@ async function createTheme(e) {
 	const index = attr(target, 'data-index');
 
 	let targetId;
+
 	if (index.length > 8) {
 		targetId = index.slice(-2);
 	} else {
@@ -42,3 +41,14 @@ async function createTheme(e) {
 }
 
 ul.addEventListener('click', createTheme);
+
+/* -------------------------------------------------------------------------- */
+
+//header 시간 바꾸기
+const headerTime = getNode('.headerTime');
+headerTime.textContent = new Date().toLocaleTimeString('ko-KR').slice(3, -3);
+
+setInterval(() => {
+	let time = new Date().toLocaleTimeString('ko-KR');
+	headerTime.textContent = time.slice(3, -3);
+}, 60000);
