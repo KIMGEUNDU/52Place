@@ -86,52 +86,23 @@
 						/>미션
 					</button>
 				</div>
-				<button onclick="location.href='../index.html'" class="coupon">로그아웃</button>
+				<button onclick="location.href='./join.html'" class="coupon">로그아웃</button>
 			</section>
 
 			<section class="bg-white">
-				<nav class="fixed bottom-0 left-1/2 z-10 w-full max-w-xs -translate-x-1/2 bg-white">
-					<ul class="navList">
-						<li class="nav__item selectNavImg">
-							<a href="#"
-								><img src="../assets/images/icons/map.png" class="navImg" alt="지도보기" />지도</a
-							>
+				<nav class="sticky top-0 z-10 bg-white">
+					<ul class="menuList">
+						<li class="menuListItem" data-tab-index="1">
+							<button type="button">피드</button>
 						</li>
-						<li class="nav__item navWidth">
-							<a href="#"
-								><img
-									src="../assets/images/icons/save.png"
-									class="navImg"
-									alt="북마크보기"
-								/>저장</a
-							>
+						<li class="menuListItem" data-tab-index="2">
+							<button type="button">방문</button>
 						</li>
-						<li class="nav__item navWidth">
-							<a href="#"
-								><img
-									src="../assets/images/icons/subway.png"
-									class="navImg"
-									alt="대중교통 정보보기"
-								/>대중교통</a
-							>
+						<li class="menuListItemReview" data-tab-index="3">
+							<button type="button">리뷰</button>
 						</li>
-						<li class="nav__item navWidth">
-							<a href="#"
-								><img
-									src="../assets/images/icons/car.png"
-									class="navImg"
-									alt="내비게이션 정보 보기"
-								/>내비게이션</a
-							>
-						</li>
-						<li class="nav__item navWidth">
-							<a href="./themePage.html"
-								><img
-									src="../assets/images/icons/my.png"
-									class="navImg"
-									alt="마이 페이지로 이동"
-								/>MY</a
-							>
+						<li class="menuListItem" data-tab-index="3">
+							<button type="button">예약&#8901;주문</button>
 						</li>
 					</ul>
 				</nav>
@@ -148,7 +119,7 @@
 										src="../assets/icons/group.png"
 										alt="조회수"
 										aria-hidden="true"
-									/><span class="view__count">0</span>
+									/><span class="view__count"></span>
 								</p>
 							</div>
 							<p class="temporarySave">임시저장</p>

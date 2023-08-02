@@ -14,84 +14,102 @@
 		<main class="relative m-auto mb-10 max-w-xs">
 			<h1 class="hidden">themeEnroll</h1>
 
-			<header class="relative z-20 m-auto h-10 max-w-xs bg-white">
-				<div class="">
-					<span class="headerTime">3:28</span>
-					<img class="headerPosition" src="/assets/images/icons/position.png" alt="위치 아이콘" />
-					<img class="headerVector" src="/assets/images/icons/vector.png" alt="네트워크 신호" />
-					<span class="headerLte">LTE</span>
-					<img class="headerBattery" src="/assets/images/icons/battery.png" alt="배터리 함량" />
-				</div>
+			<header class="m-auto h-10 max-w-xs bg-white">
+				<span class="headerTime">1:21</span>
+				<img class="headerPosition" src="../assets/icons/position.png" alt="위치 아이콘" />
+				<img class="headerVector" src="../assets/icons/vector.png" alt="네트워크 신호" />
+				<span class="headerLte">LTE</span>
+				<img class="headerBattery" src="../assets/icons/battery.png" alt="배터리 함량" />
 			</header>
 
-			<section
-				class="h-[348px] bg-gray7 bg-[url('/assets/images/reviewcake.png')] bg-cover px-4 pb-8 pt-3"
-			>
+			<section class="h-[348px] bg-gray7 bg-[url('/assets/images/reviewcake.png')] bg-cover pb-8">
 				<!-- 헤딩 -->
-				<section class="sticky top-0 z-10 flex items-center justify-between pb-4 pt-1">
-					<a href="http://localhost:5500/pages/themeEnroll_1.html"
-						><img src="/assets/icons/leftwhite.png" alt="뒤로가기"
-					/></a>
-					<button class="activeThemeEnterButton">등록</button>
-				</section>
+				<div class="menuEnroll">
+					<a href="http://localhost:5500/pages/themePage.html">
+						<img id="scrollArrowImage" src="/assets/icons/arrowwhite.png" alt="뒤로가기" />
+					</a>
+					<button
+						type="submit"
+						onclick="location.href='themePage.html'"
+						class="activeThemeEnterButton"
+					>
+						등록
+					</button>
+				</div>
 
-				<form action="URL" class="flex flex-row text-white">
-					<fieldset>
-						<legend class="sr-only">리뷰 작성 폼</legend>
+				<div class="ml-4">
+					<form action="URL" class="flex flex-row text-white">
+						<fieldset>
+							<legend class="sr-only">리뷰 작성 폼</legend>
 
-						<div class="coverTitle">
-							<label for="coverTitle" class="sr-only">제목</label>
-							<input
-								type="text"
-								class="cover__title input ml-2 mt-2 border-white font-semibold placeholder:text-2xl placeholder:text-white"
-								id="coverTitle"
-								name="coverTitle"
-								placeholder="연남/합정 데이트"
-								required
-								onfocus="this.placeholder=''"
-								onblur="this.placeholder='제목을 입력해주세요*'"
-							/>
-							<p class="text-right text-xs text-contentTeriary">0/00</p>
-						</div>
+							<div class="coverTitle">
+								<label for="coverTitle" class="sr-only">제목</label>
+								<input
+									type="text"
+									class="cover__title input ml-2 mt-2 border-white font-semibold placeholder:text-2xl placeholder:text-white"
+									id="coverTitle"
+									name="coverTitle"
+									placeholder="연남/합정 데이트"
+									required=""
+									onfocus="this.placeholder=''"
+									onblur="this.placeholder='제목을 입력해주세요*'"
+									oninput="updateCount(this, '.cover-title-count')"
+								/>
+								<span
+									id="textLength"
+									class="float-right mr-4 flex text-right text-xs text-contentTeriary"
+								>
+									<p class="cover-title-count text-white">8</p>
+									/20
+								</span>
+							</div>
 
-						<div class="cover__sub">
-							<label for="cover__sub" class="sr-only">제목</label>
-							<input
-								type="text"
-								class="cover__sub input ml-2 placeholder:text-sm placeholder:text-white"
-								id="coverSub"
-								name="coverSub"
-								placeholder="데이트 코스 모음"
-								onfocus="this.placeholder=''"
-								onblur="this.placeholder='어떤 리스트인지 설명해주세요'"
-							/>
-							<p class="text-right text-xs text-contentTeriary">0/00</p>
-						</div>
+							<div class="cover__sub">
+								<label for="cover__sub" class="sr-only">제목</label>
+								<input
+									type="text"
+									class="cover__sub input ml-2 placeholder:text-sm placeholder:text-white"
+									id="coverSub"
+									name="coverSub"
+									placeholder="데이트 코스 모음"
+									onfocus="this.placeholder=''"
+									onblur="this.placeholder='어떤 리스트인지 설명해주세요'"
+									oninput="updateCount(this, '.cover-sub-count')"
+								/>
+								<span
+									id="textLength"
+									class="float-right mr-4 flex text-right text-xs text-contentTeriary"
+								>
+									<p class="cover-sub-count text-white">8</p>
+									/20
+								</span>
+							</div>
 
-						<div class="coverButton__div">
-							<button class="coverButton">
-								<span class="ml-1 flex font-semibold">커버변경</span>
-								<span class="ml-1 pt-[4px] text-xs font-light text-white">필수</span>
-							</button>
-						</div>
-					</fieldset>
-				</form>
+							<div class="coverButton__div">
+								<button class="coverButton">
+									<span class="ml-1 flex font-semibold">커버변경</span>
+									<span class="ml-1 pt-[4px] text-xs font-light text-white">필수</span>
+								</button>
+							</div>
+						</fieldset>
+					</form>
+				</div>
 			</section>
 
 			<section>
 				<div class="m-4 flex justify-between">
 					<div class="flex font-semibold">
-						<h2 class="">리뷰</h2>
-						<span class="ml-1 text-info">2</span>
+						<h2>리뷰</h2>
+						<span class="reviewAll__count">2</span>
 						<span class="text-contentTeriary">/10</span>
 					</div>
-					<ul class="flex items-center">
+					<div class="flex items-center">
 						<li class="flex flex-row gap-1 text-xs text-contentSecondary">
 							<button>임시저장 |</button>
 							<button>순서변경 |</button>
-							<button>전체삭제</button>
+							<button id="deleteButton">전체삭제</button>
 						</li>
-					</ul>
+					</div>
 				</div>
 
 				<ul class="enroll__list"></ul>
@@ -102,50 +120,41 @@
 					<img src="/assets/icons/plus.png" alt="icon-lg-plus" />
 				</button>
 			</section>
-
-			<aside class="fixed bottom-0 z-20 bg-white px-4">
-				<nav class="fixed bottom-0 left-1/2 z-10 w-full max-w-xs -translate-x-1/2 bg-white">
-					<ul class="navList">
-						<li class="nav__item selectNavImg">
-							<a href="map.html"
-								><img src="/assets/images/icons/map.png" class="navImg" alt="지도보기" />지도</a
-							>
-						</li>
-						<li class="nav__item navWidth">
-							<a href="#"
-								><img src="/assets/images/icons/save.png" class="navImg" alt="북마크보기" />저장</a
-							>
-						</li>
-						<li class="nav__item navWidth">
-							<a href="#"
-								><img
-									src="/assets/images/icons/subway.png"
-									class="navImg"
-									alt="대중교통 정보보기"
-								/>대중교통</a
-							>
-						</li>
-						<li class="nav__item navWidth">
-							<a href="#"
-								><img
-									src="/assets/images/icons/car.png"
-									class="navImg"
-									alt="내비게이션 정보 보기"
-								/>내비게이션</a
-							>
-						</li>
-						<li class="nav__item navWidth">
-							<a href="./themePage.html"
-								><img
-									src="/assets/images/icons/my.png"
-									class="navImg"
-									alt="마이 페이지로 이동"
-								/>MY</a
-							>
-						</li>
-					</ul>
-				</nav>
-			</aside>
 		</main>
+		<nav class="fixed bottom-0 left-1/2 z-10 w-full max-w-xs -translate-x-1/2 bg-white">
+			<ul class="navList">
+				<li class="nav__item navWidth">
+					<a href="map.html"
+						><img src="../assets/icons/map.png" class="navImg" alt="지도보기" />지도</a
+					>
+				</li>
+				<li class="nav__item navWidth">
+					<a href="#"><img src="../assets/icons/save.png" class="navImg" alt="북마크보기" />저장</a>
+				</li>
+				<li class="nav__item navWidth">
+					<a href="#"
+						><img
+							src="../assets/icons/subway.png"
+							class="navImg"
+							alt="대중교통 정보보기"
+						/>대중교통</a
+					>
+				</li>
+				<li class="nav__item navWidth">
+					<a href="#"
+						><img
+							src="../assets/icons/car.png"
+							class="navImg"
+							alt="내비게이션 정보 보기"
+						/>내비게이션</a
+					>
+				</li>
+				<li class="nav__item selectNavImg">
+					<a href="./themePage.html"
+						><img src="../assets/icons/my.png" class="navImg" alt="마이 페이지로 이동" />MY</a
+					>
+				</li>
+			</ul>
+		</nav>
 	</body>
 </html>

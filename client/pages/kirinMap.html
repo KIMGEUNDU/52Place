@@ -36,13 +36,17 @@
 					onclick="location.href='themePage.html'"
 					class="absolute left-2 top-2 z-10 h-6 w-6 bg-mapBefore bg-contain bg-no-repeat"
 				></button>
+				<button
+					onclick="location.href='map.html'"
+					class="absolute right-28 top-2 z-10 h-8 w-8 bg-spreadMap bg-contain bg-no-repeat"
+				></button>
 			</div>
 			<div class="absolute bottom-14 left-0 z-10 w-full bg-white">
 				<div class="flex justify-between gap-1">
 					<a href="#">
 						<img
 							class="h-[155px] w-[155px] rounded-lg"
-							src="https://mp-seoul-image-production-s3.mangoplate.com/617296_1630241972154648.jpg?fit=around|512:512&crop=512:512;*,*&output-format=jpg&output-quality=80"
+							src="https://scontent-ssn1-1.xx.fbcdn.net/v/t39.30808-6/306283188_416538513924392_7528130505090889601_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=730e14&_nc_ohc=cwRryE-c4zgAX9f5h2n&_nc_ht=scontent-ssn1-1.xx&oh=00_AfBkyW-Ko7HZAWZV-31e-O-H1_D-VPckNV508S_JeoL9zQ&oe=64CF005A"
 							alt="기린작업실 리뷰사진"
 						/>
 					</a>
@@ -89,20 +93,18 @@
 
 		<nav class="fixed bottom-0 left-1/2 z-10 w-full max-w-xs -translate-x-1/2 bg-white">
 			<ul class="navList">
-				<li class="nav__item selectNavImg">
+				<li class="nav__item navWidth">
 					<a href="map.html"
-						><img src="../assets/images/icons/map.png" class="navImg" alt="지도보기" />지도</a
+						><img src="../assets/icons/map.png" class="navImg" alt="지도보기" />지도</a
 					>
 				</li>
 				<li class="nav__item navWidth">
-					<a href="#"
-						><img src="../assets/images/icons/save.png" class="navImg" alt="북마크보기" />저장</a
-					>
+					<a href="#"><img src="../assets/icons/save.png" class="navImg" alt="북마크보기" />저장</a>
 				</li>
 				<li class="nav__item navWidth">
 					<a href="#"
 						><img
-							src="../assets/images/icons/subway.png"
+							src="../assets/icons/subway.png"
 							class="navImg"
 							alt="대중교통 정보보기"
 						/>대중교통</a
@@ -111,19 +113,15 @@
 				<li class="nav__item navWidth">
 					<a href="#"
 						><img
-							src="../assets/images/icons/car.png"
+							src="../assets/icons/car.png"
 							class="navImg"
 							alt="내비게이션 정보 보기"
 						/>내비게이션</a
 					>
 				</li>
-				<li class="nav__item navWidth">
+				<li class="nav__item selectNavImg">
 					<a href="./themePage.html"
-						><img
-							src="../assets/images/icons/my.png"
-							class="navImg"
-							alt="마이 페이지로 이동"
-						/>MY</a
+						><img src="../assets/icons/my.png" class="navImg" alt="마이 페이지로 이동" />MY</a
 					>
 				</li>
 			</ul>
