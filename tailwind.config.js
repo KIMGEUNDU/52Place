@@ -48,7 +48,6 @@ module.exports = {
 				mapBefore: 'url(/assets/icons/mapbefore.png)',
 				heartFalse: 'url(/assets/icons/heartactive=false.png)',
 				heartTrue: 'url(/assets/icons/heartactive=true.png)',
-				subwayWhite: 'url(/assets/icons/subwaywhite.png)',
 			},
 		},
 	},
