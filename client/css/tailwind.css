@@ -608,63 +608,6 @@ input[type='file'] {
 	@apply h-[57px] w-[66px];
 }
 
-/* jay 추가 */
-.newListSize {
-	@apply mb-3 flex justify-between rounded-xl bg-white px-4 py-6 shadow-thumnail;
-}
-
-.photoAdd {
-	@apply w-[140px] rounded-lg border border-black bg-photoTrue bg-[center_left_0.4rem] bg-no-repeat py-3 pl-7 pr-3 text-xs font-semibold;
-}
-
-.likeBtn {
-	@apply mb-2 h-10 rounded-lg bg-white px-5 text-xs font-semibold text-contentTeriary shadow-bottom;
-}
-
-.likeBtnClicked {
-	@apply mb-2 h-10 rounded-lg bg-primary px-5 text-xs font-semibold text-white shadow-bottom;
-}
-
-.choiceBtnBox {
-	@apply flex w-[200px] flex-col items-center justify-center;
-}
-
-.choiceBtn {
-	@apply mb-2 h-10 rounded-lg bg-white px-5 text-xs font-semibold text-contentTeriary shadow-bottom;
-}
-
-.choiceBtnClicked {
-	@apply mb-2 h-10 rounded-lg bg-primary px-5 text-xs font-semibold text-white shadow-bottom;
-}
-
-.reviewTextArea {
-	@apply h-[110px] w-full overflow-y-hidden rounded-lg bg-grayBg px-3 py-2 focus:outline-none;
-}
-
-.inputLength {
-	@apply absolute bottom-3 right-5 text-right text-xs text-contentTeriary;
-}
-
-.newReviewSubmit {
-	@apply mb-2 h-10 rounded-lg bg-primary px-6 text-xs text-white;
-}
-
-.a11yHidden {
-	@apply absolute -m-1 hidden h-1 w-1 overflow-hidden whitespace-nowrap border-0 p-0;
-}
-
-.uploadImgBox {
-	@apply mt-1 flex w-full items-center justify-center gap-4 overflow-hidden px-4 pt-6;
-}
-
-.uploadImg {
-	@apply h-[80px] w-[80px] rounded-md;
-}
-
-.mapHeartFalse {
-	@apply h-[18px] w-[18px] bg-mapHeartFalse bg-[left_top_0.1rem] bg-no-repeat;
-}
-
-.mapHeartTrue {
-	@apply h-[18px] w-[18px] bg-mapHeartTrue bg-[left_top_0.1rem] bg-no-repeat;
+.reviewAll__count {
+	@apply ml-1 text-info;
 }
