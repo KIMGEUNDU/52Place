@@ -136,6 +136,8 @@ upLoadBtn.addEventListener('change', handleUpload);
 // 등록버튼 클릭시 글자수 검사하고 데이터 추가하기
 const newReview = await userDataReview.get('http://localhost:3000/review');
 const newReviewData = newReview.data;
+const deleteReview = await userDataReview.get('http://localhost:3000/newReview');
+const deleteReviewData = deleteReview.data;
 
 const newReviewSubmit = getNode('.newReviewSubmit');
 
@@ -155,14 +157,11 @@ async function handleNewReviewAdd(e) {
 	e.preventDefault();
 	try {
 		if (reviewText.value.length >= 30) {
-			const response = await userDataReview.post(URL, beatphobiaImg());
-			if (!response.ok) {
-				alert('리뷰 작성에 실패했습니다. 다시 시도해주세요');
-				location.href = 'themePage.html';
-			} else {
+			await userDataReview.post(URL, beatphobiaImg()).then(() => {
 				alert('리뷰를 저장하였습니다.');
 				location.href = 'themePage.html';
-			}
+				userDataReview.delete('http://localhost:3000/newReview/2');
+			});
 		} else {
 			e.preventDefault();
 			alert('리뷰를 30자 이상 작성해주세요');

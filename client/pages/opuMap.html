@@ -36,6 +36,10 @@
 					onclick="location.href='themePage.html'"
 					class="absolute left-2 top-2 z-10 h-6 w-6 bg-mapBefore bg-contain bg-no-repeat"
 				></button>
+				<button
+					onclick="location.href='map.html'"
+					class="absolute right-28 top-2 z-10 h-8 w-8 bg-spreadMap bg-contain bg-no-repeat"
+				></button>
 			</div>
 			<div class="absolute bottom-14 left-0 z-10 w-full bg-white">
 				<div class="flex justify-between gap-1">
@@ -89,20 +93,18 @@
 
 		<nav class="fixed bottom-0 left-1/2 z-10 w-full max-w-xs -translate-x-1/2 bg-white">
 			<ul class="navList">
-				<li class="nav__item selectNavImg">
-					<a href="#"
-						><img src="../assets/images/icons/map.png" class="navImg" alt="지도보기" />지도</a
+				<li class="nav__item navWidth">
+					<a href="map.html"
+						><img src="../assets/icons/map.png" class="navImg" alt="지도보기" />지도</a
 					>
 				</li>
 				<li class="nav__item navWidth">
-					<a href="#"
-						><img src="../assets/images/icons/save.png" class="navImg" alt="북마크보기" />저장</a
-					>
+					<a href="#"><img src="../assets/icons/save.png" class="navImg" alt="북마크보기" />저장</a>
 				</li>
 				<li class="nav__item navWidth">
 					<a href="#"
 						><img
-							src="../assets/images/icons/subway.png"
+							src="../assets/icons/subway.png"
 							class="navImg"
 							alt="대중교통 정보보기"
 						/>대중교통</a
@@ -111,19 +113,15 @@
 				<li class="nav__item navWidth">
 					<a href="#"
 						><img
-							src="../assets/images/icons/car.png"
+							src="../assets/icons/car.png"
 							class="navImg"
 							alt="내비게이션 정보 보기"
 						/>내비게이션</a
 					>
 				</li>
-				<li class="nav__item navWidth">
+				<li class="nav__item selectNavImg">
 					<a href="./themePage.html"
-						><img
-							src="../assets/images/icons/my.png"
-							class="navImg"
-							alt="마이 페이지로 이동"
-						/>MY</a
+						><img src="../assets/icons/my.png" class="navImg" alt="마이 페이지로 이동" />MY</a
 					>
 				</li>
 			</ul>

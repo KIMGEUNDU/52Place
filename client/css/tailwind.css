@@ -545,7 +545,7 @@ input[type='file'] {
 }
 
 .enroll__list {
-	@apply relative px-2 pb-4 drop-shadow-sm;
+	@apply relative pb-4 drop-shadow-sm;
 }
 
 .Enroll__number {
@@ -666,4 +666,12 @@ input[type='file'] {
 
 .mapHeartTrue {
 	@apply h-[18px] w-[18px] bg-mapHeartTrue bg-[left_top_0.1rem] bg-no-repeat;
+}
+
+.writeAble {
+	@apply mb-2 font-semibold;
+}
+
+.writeAbleEmpty {
+	@apply mb-2 text-center text-xl font-semibold;
 }
