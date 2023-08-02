@@ -142,7 +142,17 @@ export function renderPlusReview(target, data) {
 	insertLast(target, createPlusReview(data));
 }
 
-export function saveRiview({ id, name, place, image }) {
+export function saveRiview({
+	id,
+	name,
+	place,
+	image,
+	data,
+	text,
+	stickerImg,
+	stickerText,
+	stickerCount,
+}) {
 	let template = /* html */ `
   <ul class="enroll__list">
   <li class="Enroll__number">
@@ -157,11 +167,9 @@ export function saveRiview({ id, name, place, image }) {
     />
   </li>
   <li class="enroll__time">
-    <p class="enroll__time__p">22.11.4 금<strong class="enroll__time__tag">방문</strong></p>
+    <p class="enroll__time__p">${data}<strong class="enroll__time__tag">방문</strong></p>
     <span class="enroll__text">
-      <p>지나가다 보고 너무 예뻐서 저장해 놓았다가</p>
-      <p>이번에 가게 되었는데 너무 예쁘고 좋았어요.</p>
-      <p>분위기도 힙하고 새로 생겼는데 오래 동안...</p>
+      <p>${text}</p>
     </span>
     <div class="enroll__tag">
       <p class="enroll__tag__p">
@@ -169,9 +177,9 @@ export function saveRiview({ id, name, place, image }) {
           class="enroll__tag__p__img"
           src="/assets/icons/time.png"
           alt="icon-sm-time"
-        />수업 시간이 충분해요
+        />${stickerText}
       </p>
-      <p class="enroll__tag__p">+5</p>
+      <p class="enroll__tag__p">${stickerCount}</p>
     </div>
   </li>
   <li class="Enroll__title">
