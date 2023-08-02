@@ -566,10 +566,6 @@ video {
   bottom: 0px;
 }
 
-.bottom-10 {
-  bottom: 2.5rem;
-}
-
 .bottom-14 {
   bottom: 3.5rem;
 }
@@ -588,10 +584,6 @@ video {
 
 .left-2 {
   left: 0.5rem;
-}
-
-.right-2 {
-  right: 0.5rem;
 }
 
 .right-28 {
@@ -641,11 +633,6 @@ video {
 .mx-4 {
   margin-left: 1rem;
   margin-right: 1rem;
-}
-
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .my-5 {
@@ -1431,6 +1418,8 @@ input[type='file'] {
   padding-bottom: 0.5rem;
   padding-left: 2.25rem;
   text-align: right;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .plusReview {
@@ -2061,7 +2050,7 @@ input[type='file'] {
   outline-offset: 2px;
 }
 
-.coverButton {
+.coverButtonEnroll {
   margin-left: auto;
   margin-right: auto;
   margin-top: 89px;
@@ -2084,7 +2073,7 @@ input[type='file'] {
   display: flex;
   border-radius: 9999px;
   border-width: 1px;
-  background-image: url(/assets/icons/subway.png);
+  background-image: url(/assets/icons/subwaywhite.png);
   background-position: center left 12px;
   background-repeat: no-repeat;
   padding-right: 0.75rem;
@@ -2718,6 +2707,19 @@ input[type='file'] {
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-weight: 600;
+}
+
+.coverBox {
+  margin-top: 2.5rem;
+  display: flex;
+  height: 330px;
+  flex-direction: column;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 18rem;
+  padding-top: 4rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .placeholder\:text-2xl::-moz-placeholder {
