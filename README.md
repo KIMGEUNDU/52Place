@@ -15,6 +15,34 @@
 
 ![오이플레이스프로젝트](https://github.com/KIMGEUNDU/17_LION-JAVASCRIPT/assets/126174401/e394d5f2-ecd5-481b-9a60-743888e76387)
 
+<br>
+
+### 프로젝트 환경설정
+> ```git clone https://github.com/KIMGEUNDU/52Place.git```  
+
+저장소를 클론해줍니다.
+
+> [Node 설치](https://nodejs.org/ko/download)  
+
+Node.js를 설치해줍니다.
+
+> ```npm i```
+
+Node.js를 설치해주고 터미널창에 명령어를 입력해줍니다.
+> 
+
+> ```npm start```
+> 
+명령어로 서버를 구동해줍니다.
+   
+<br>
+
+### 프로젝트 컨벤션
+
+[💚 Commit Convention](https://github.com/KIMGEUNDU/52Place/wiki/%F0%9F%A5%92-Commit-Convention)  
+[💙 Coding Convention](https://github.com/KIMGEUNDU/52Place/wiki/%F0%9F%A5%92-Coding-Convention)  
+
+<br>
 
 ### 프로젝트명
 
@@ -23,7 +51,8 @@
 
 <br>
 
-### 프로젝트 조원
+### 프로젝트 조원  
+[💛 오이플레이스 조원 소개](https://github.com/KIMGEUNDU/52Place/wiki/%F0%9F%A5%92-%EC%98%A4%EC%9D%B4%ED%94%8C%EB%A0%88%EC%9D%B4%EC%8A%A4)  
 
 - 조장 : 이예나
 - 조원 : 김건주, 윤진, 정지영
@@ -50,9 +79,9 @@
 <br>
 
 ### 프로젝트 코딩컨벤션 및 커밋컨벤션
-[📢 코딩컨벤션](https://github.com/52Ten/52Place/wiki/%F0%9F%A4%99-Coding-Convention)
-[📢 커밋컨벤션](https://github.com/52Ten/52Place/wiki/%F0%9F%93%A2-Commit-Convention)
-
+[📢 코딩컨벤션](https://github.com/52Ten/52Place/wiki/%F0%9F%A4%99-Coding-Convention)  
+[📢 커밋컨벤션](https://github.com/52Ten/52Place/wiki/%F0%9F%93%A2-Commit-Convention)  
+ 
 <br>
 
 ### 사용기술 및 라이브러리
